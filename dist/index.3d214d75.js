@@ -27103,47 +27103,46 @@ var _landingPageV1MobileDefault = parcelHelpers.interopDefault(_landingPageV1Mob
 var _macBookAir1 = require("./components/MacBookAir1");
 var _macBookAir1Default = parcelHelpers.interopDefault(_macBookAir1);
 function App() {
+    const isMobileScreen = window.innerWidth < 600; // Adjust the breakpoint to your desired width
+    console.log("Is Mobile Screen:", isMobileScreen);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.BrowserRouter), {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Switch), {
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                    path: "/landing-page-v1-mobile",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _landingPageV1MobileDefault.default), {
-                        ...landingPageV1MobileData
-                    }, void 0, false, {
-                        fileName: "App.jsx",
-                        lineNumber: 12,
-                        columnNumber: 11
-                    }, this)
+            children: isMobileScreen ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                path: "/",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _landingPageV1MobileDefault.default), {
+                    ...landingPageV1MobileData
                 }, void 0, false, {
                     fileName: "App.jsx",
-                    lineNumber: 11,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                    path: "/:path(|macbook-air-1)",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _macBookAir1Default.default), {
-                        ...macBookAir1Data
-                    }, void 0, false, {
-                        fileName: "App.jsx",
-                        lineNumber: 15,
-                        columnNumber: 11
-                    }, this)
-                }, void 0, false, {
-                    fileName: "App.jsx",
-                    lineNumber: 14,
-                    columnNumber: 9
+                    lineNumber: 15,
+                    columnNumber: 7
                 }, this)
-            ]
-        }, void 0, true, {
+            }, void 0, false, {
+                fileName: "App.jsx",
+                lineNumber: 14,
+                columnNumber: 6
+            }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                path: "/",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _macBookAir1Default.default), {
+                    ...macBookAir1Data
+                }, void 0, false, {
+                    fileName: "App.jsx",
+                    lineNumber: 19,
+                    columnNumber: 7
+                }, this)
+            }, void 0, false, {
+                fileName: "App.jsx",
+                lineNumber: 18,
+                columnNumber: 6
+            }, this)
+        }, void 0, false, {
             fileName: "App.jsx",
-            lineNumber: 10,
-            columnNumber: 7
+            lineNumber: 12,
+            columnNumber: 4
         }, this)
     }, void 0, false, {
         fileName: "App.jsx",
-        lineNumber: 9,
-        columnNumber: 5
+        lineNumber: 11,
+        columnNumber: 3
     }, this);
 }
 _c = App;
@@ -27318,15 +27317,15 @@ const landingPageV1MobileData = {
             "Tu familia es importante ",
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                 fileName: "App.jsx",
-                lineNumber: 233,
-                columnNumber: 81
+                lineNumber: 242,
+                columnNumber: 29
             }, undefined),
             "para nosotros"
         ]
     }, void 0, true, {
         fileName: "App.jsx",
-        lineNumber: 233,
-        columnNumber: 40
+        lineNumber: 241,
+        columnNumber: 3
     }, undefined),
     estamos24HorasAl: "Estamos 24 horas al d\xeda disponibles para la salud de tus mascotas.",
     quServiciosOfrecemos: "\xbfQu\xe9 servicios ofrecemos?",
