@@ -1,0 +1,42 @@
+.button-1 {
+  cursor: pointer;
+  height: 55.61px;
+  position: relative;
+  transition: all 0.2s ease;
+  width: 202.97px;
+}
+
+.button-1:hover,
+.boton-contactanos:hover {
+  transform: scale(0.9); 
+}
+
+.contactanos-container {
+  border-radius: 11px;
+  height: 56px;
+  position: relative;
+  width: 203px;
+}
+
+.boton-contactanos {
+  background-color: var(--x2d2d2d);
+  border-radius: 11px;
+  cursor: pointer;
+  height: 56px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: all 0.2s ease;
+  width: 203px;
+}
+
+.contactanos {
+  left: 30px;
+  letter-spacing: 0;
+  line-height: 37px;
+  position: absolute;
+  top: 8px;
+  white-space: nowrap;
+  width: 143px;
+}
+

@@ -1,0 +1,25 @@
+.cards-row-1 {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 239px;
+  position: relative;
+  width: 580px;
+}
+
+.los-mejores-mdicos-1 {
+  align-self: stretch;
+  letter-spacing: -0.76px;
+  line-height: 49.4px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.somos-un-equipo-de-p-1 {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 24px;
+  position: relative;
+}
+

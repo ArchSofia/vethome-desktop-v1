@@ -1,0 +1,48 @@
+.card-info-3 {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+  width: 100%;
+}
+
+.text-6 {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+  width: 100%;
+}
+
+.ecografa-1,
+.radiologa-1,
+.ciruga-1,
+.peluquera-1,
+.especialidades-1 {
+  align-self: stretch;
+  letter-spacing: -0.28px;
+  line-height: 36.4px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.diagnstico-de-imge,
+.imagen-por-rayos-x-p-2,
+.cirugas-ambulatoria,
+.servicios-de-peluque,
+.contamos-con-profesi {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 24px;
+  position: relative;
+  text-align: center;
+}
+

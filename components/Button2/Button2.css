@@ -1,0 +1,30 @@
+.button-4,
+.button-5 {
+  align-items: center;
+  background-color: var(--x2d2d2d);
+  border-radius: 20px;
+  cursor: pointer;
+  display: inline-flex;
+  gap: 8px;
+  height: 60px;
+  justify-content: center;
+  padding: 16px 50px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.button-4:hover,
+.button-5:hover {
+  transform: scale(0.97); 
+}
+
+.label-3,
+.label-4 {
+  letter-spacing: 0;
+  line-height: 24px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+

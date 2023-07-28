@@ -1,0 +1,46 @@
+.card-info-1 {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+  width: 100%;
+}
+
+.text-2 {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+  width: 100%;
+}
+
+.radiologa,
+.ecografa,
+.ciruga,
+.especialidades,
+.pet-shop,
+.peluquera {
+  align-self: stretch;
+  letter-spacing: -0.28px;
+  line-height: 36.4px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.imagen-por-rayos-x-p-1 {
+  align-self: stretch;
+  height: 72px;
+  letter-spacing: 0;
+  line-height: 24px;
+  position: relative;
+  text-align: center;
+}
+

@@ -1,0 +1,27 @@
+.contact-details-2-item {
+  align-items: center;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 12px;
+  position: relative;
+  width: 465px;
+}
+
+.phone-call-2,
+.envelope-simple-5 {
+  height: 24px;
+  position: relative;
+  width: 24px;
+}
+
+.text-5-1,
+.helloanimaappcom {
+  color: var(--onboarding-background-grey);
+  flex: 1;
+  font-weight: 400;
+  line-height: 24px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+}
+

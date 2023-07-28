@@ -1,0 +1,23 @@
+.navbar {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  justify-content: center;
+  padding: 36px 0px;
+  position: relative;
+}
+
+.title {
+  color: var(--x2d2d2d);
+  font-family: var(--font-family-gotham_rounded-bold);
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+

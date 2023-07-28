@@ -1,0 +1,48 @@
+.star-rating-2 {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 5px;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.star-icon {
+  height: 25.1px;
+  margin-bottom: -1.01px;
+  margin-top: -1.00px;
+  position: relative;
+  width: 25.99px;
+}
+
+.star-rating-2.star-rating-1,
+.star-rating-2.star-rating-1-1 {
+  justify-content: unset;
+}
+
+.star-rating-2.star-rating-1-1 .star-icon,
+.star-rating-2.star-rating-1 .star-icon {
+  margin-left: -1.00px;
+  width: 25.99px;
+}
+
+.star-rating-2.star-rating-1-1 .star-icon.variant-1,
+.star-rating-2.star-rating-1 .star-icon.variant-1 {
+  margin-left: unset;
+}
+
+.star-rating-2.star-rating-1-1 .star-icon.variant-2,
+.star-rating-2.star-rating-1-1 .star-icon.variant-3,
+.star-rating-2.star-rating-1-1 .star-icon.variant-4,
+.star-rating-2.star-rating-1 .star-icon.variant-2,
+.star-rating-2.star-rating-1 .star-icon.variant-3,
+.star-rating-2.star-rating-1 .star-icon.variant-4 {
+  height: 25.1px;
+  margin-bottom: -1.01px;
+  margin-left: unset;
+  margin-top: -1.00px;
+  position: relative;
+}
+

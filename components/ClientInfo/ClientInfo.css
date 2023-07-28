@@ -1,0 +1,50 @@
+.client-info {
+  align-items: center;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+  position: relative;
+  width: 180px;
+}
+
+.photo {
+  height: 120px;
+  object-fit: cover;
+  position: relative;
+  width: 120px;
+}
+
+.person-details {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 6px;
+  position: relative;
+  width: 100%;
+}
+
+.lauren-m {
+  align-self: stretch;
+  color: var(--neutral900);
+  font-weight: 600;
+  line-height: 27.3px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.ui-designer-boo {
+  align-self: stretch;
+  color: var(--neutral700);
+  font-weight: 400;
+  line-height: 22.4px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+}
+

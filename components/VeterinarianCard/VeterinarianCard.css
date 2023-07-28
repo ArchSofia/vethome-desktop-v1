@@ -1,0 +1,121 @@
+.veterinarian-card {
+  align-items: flex-end;
+  display: flex;
+  height: 139px;
+  left: 35px;
+  min-width: 289px;
+  position: absolute;
+  top: 187px;
+}
+
+.overlap-group-5 {
+  align-items: flex-end;
+  background-color: var(--white);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: -59.97px;
+  min-height: 199px;
+  padding: 6.3px 18.9px;
+  width: 240px;
+}
+
+.screen-shot-2023-04-17-at-2015-2-2 {
+  align-self: flex-start;
+  height: 57px;
+  margin-left: 6.79px;
+  object-fit: cover;
+  width: 55px;
+}
+
+.overlap-group3-2 {
+  height: 59px;
+  margin-right: 15.03px;
+  margin-top: 1px;
+  position: relative;
+  width: 180px;
+}
+
+.overlap-group1-4 {
+  height: 59px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 180px;
+}
+
+.dr-guadalupe-poggio {
+  color: var(--blackcurrant);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-l);
+  font-weight: 700;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 37px;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+}
+
+.veterinaria-2 {
+  left: 0;
+  letter-spacing: 0;
+  line-height: 37px;
+  position: absolute;
+  top: 26px;
+  white-space: nowrap;
+  width: 74px;
+}
+
+.text-4-1 {
+  left: 157px;
+  letter-spacing: 0;
+  line-height: 37px;
+  position: absolute;
+  top: 30px;
+  white-space: nowrap;
+  width: 23px;
+}
+
+.star_3794158-1 {
+  height: 18px;
+  left: 135px;
+  object-fit: cover;
+  position: absolute;
+  top: 38px;
+  width: 18px;
+}
+
+.overlap-group2-2 {
+  height: 61px;
+  margin-top: 4px;
+  position: relative;
+  width: 195px;
+}
+
+.x1200-pacientes {
+  color: #9d9dab;
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-s);
+  font-weight: 600;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 37px;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+}
+
+.universidad-de-buenos-aires {
+  color: #d0d0dd;
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-s);
+  font-weight: 600;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 37px;
+  position: absolute;
+  top: 24px;
+  white-space: nowrap;
+}
+

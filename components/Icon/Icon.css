@@ -1,0 +1,32 @@
+.icon-1,
+.icon-2 {
+  align-items: flex-start;
+  background-color: var(--bombay);
+  border-radius: 20px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  padding: 20px;
+  position: relative;
+}
+
+.raio-x-1,
+.ecografia-1,
+.intensivista-1,
+.surgeon_3056783-1,
+.gastroenterologist_847211-1,
+.pet-shop_6317382-1,
+.pet-grooming_6317351-1,
+.ecografia-1-1,
+.raio-x-1-1,
+.intensivista-1-1,
+.surgeon_3056783-1-1,
+.pet-grooming_6317351-1-1,
+.gastroenterologist_847211-1-1,
+.pet-shop_6317382-1-1 {
+  height: 48px;
+  object-fit: cover;
+  position: relative;
+  width: 48px;
+}
+

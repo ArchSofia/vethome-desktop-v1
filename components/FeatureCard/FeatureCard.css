@@ -1,0 +1,15 @@
+.feature-card-6 {
+  align-items: center;
+  background-color: var(--white);
+  border: 1px solid;
+  border-color: var(--cta---aqua-squeeze);
+  border-radius: 20px;
+  box-shadow: 34.85px 29.63px 48.34px #3265ff0d;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 48px 30px;
+  position: relative;
+  width: 370px;
+}
+

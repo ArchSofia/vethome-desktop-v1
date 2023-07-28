@@ -1,0 +1,37 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:600|Inter:700,600|Poppins:700,600|Mulish:400");
+/* The following line is used to measure usage of this code. You can remove it if you want. */
+@import url("https://px.animaapp.com/64b1529b06f5c7bd7924b42a.64b1529b06f5c7bd7924b42d.8ODk9NH.rcp.png");
+
+@font-face {
+  font-family: "Gotham Rounded-Bold";
+  font-style: normal;
+  font-weight: 700;
+  src: url("static/fonts/Gotham-Rounded-Bold_21016.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Gotham Rounded-Book";
+  font-style: normal;
+  font-weight: 400;
+  src: url("static/fonts/Gotham-Rounded-Book_21018.ttf") format("truetype");
+}
+
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.valign-text-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+input:focus {
+  outline: none;
+}
+
+* {
+  box-sizing: border-box;
+}

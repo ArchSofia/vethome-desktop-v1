@@ -1,0 +1,228 @@
+.group-9 {
+  height: 312px;
+  margin-left: -17.50px;
+  margin-right: -17.50px;
+  position: relative;
+  width: 378px;
+}
+
+.overlap-group3 {
+  height: 325px;
+  left: 9px;
+  position: relative;
+  top: 31px;
+  width: 361px;
+}
+
+.overlap-group {
+  height: 304px;
+  left: 35px;
+  position: absolute;
+  top: 21px;
+  width: 322px;
+}
+
+.ellipse-2 {
+  background-color: var(--mercury);
+  border-radius: 151.9px/151.88px;
+  height: 304px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 304px;
+}
+
+.ellipse-3 {
+  background-color: var(--bombay-2);
+  border-radius: 94.78px/94.77px;
+  height: 190px;
+  left: 57px;
+  position: absolute;
+  top: 57px;
+  width: 190px;
+}
+
+.rectangle-7 {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 31px;
+  left: 285px;
+  position: absolute;
+  top: 199px;
+  transform: rotate(34.00deg);
+  width: 31px;
+}
+
+.screen-shot-2023-04-17-at-2042-2 {
+  height: 19px;
+  left: 291px;
+  object-fit: cover;
+  position: absolute;
+  top: 206px;
+  width: 18px;
+}
+
+.rectangle-8 {
+  background-color: var(--white);
+  border-radius: 12px;
+  height: 102px;
+  left: 239px;
+  position: absolute;
+  top: 53px;
+  width: 75px;
+}
+
+.screen-shot-2023-04-17-at-2040-2 {
+  height: 30px;
+  left: 261px;
+  object-fit: cover;
+  position: absolute;
+  top: 64px;
+  width: 31px;
+}
+
+.text-1 {
+  color: var(--blackcurrant);
+  font-family: var(--font-family-inter);
+  font-size: 11px;
+  font-weight: 700;
+  left: 259px;
+  letter-spacing: 0;
+  line-height: 17px;
+  position: absolute;
+  top: 99px;
+  white-space: nowrap;
+  width: 32px;
+}
+
+.pacientes-registrados {
+  color: var(--manatee);
+  font-family: var(--font-family-inter);
+  font-size: 7px;
+  font-weight: 700;
+  left: 252px;
+  letter-spacing: 0;
+  line-height: 12px;
+  position: absolute;
+  text-align: center;
+  top: 119px;
+  width: 49px;
+}
+
+.overlap-group1-1 {
+  height: 40px;
+  left: 40px;
+  position: absolute;
+  top: 69px;
+  width: 40px;
+}
+
+.rectangle-7-1 {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 31px;
+  left: 4px;
+  position: absolute;
+  top: 4px;
+  transform: rotate(-20.00deg);
+  width: 31px;
+}
+
+.screen-shot-2023-04-17-at-2037-2 {
+  height: 20px;
+  left: 8px;
+  object-fit: cover;
+  position: absolute;
+  top: 10px;
+  width: 24px;
+}
+
+.bordercollie {
+  height: 300px;
+  left: 44px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 272px;
+}
+
+.overlap-group2 {
+  align-items: flex-start;
+  background-color: var(--white);
+  border-radius: 10px;
+  display: flex;
+  gap: 7px;
+  height: 67px;
+  justify-content: flex-end;
+  left: 0;
+  min-width: 138px;
+  padding: 10.2px 11.7px;
+  position: absolute;
+  top: 173px;
+}
+
+.overlap-group-1 {
+  height: 44px;
+  position: relative;
+  width: 81px;
+}
+
+.rectangle-8-1 {
+  background-color: var(--saltpan);
+  border-radius: 11px;
+  height: 15px;
+  left: 0;
+  position: absolute;
+  top: 29px;
+  width: 65px;
+}
+
+.disponible-para-consulta {
+  color: var(--caribbean-green-pearl);
+  font-family: var(--font-family-inter);
+  font-size: 4px;
+  font-weight: 600;
+  left: 9px;
+  letter-spacing: 0;
+  line-height: 37px;
+  position: absolute;
+  top: 19px;
+  white-space: nowrap;
+  width: 52px;
+}
+
+.dr-guadalupe-poggi {
+  color: var(--blackcurrant);
+  font-family: var(--font-family-inter);
+  font-size: 8px;
+  font-weight: 700;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 37px;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+  width: 81px;
+}
+
+.veterinaria {
+  color: var(--manatee);
+  font-family: var(--font-family-inter);
+  font-size: 5px;
+  font-weight: 600;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 37px;
+  position: absolute;
+  top: 9px;
+  white-space: nowrap;
+  width: 36px;
+}
+
+.screen-shot-2023-04-17-at-2015-2 {
+  height: 27px;
+  margin-top: 0;
+  object-fit: cover;
+  width: 26px;
+}
+

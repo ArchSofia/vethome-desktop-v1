@@ -1,0 +1,73 @@
+.navbar-links {
+  height: 37px;
+  margin-right: -10.00px;
+  position: relative;
+  width: 503.59px;
+}
+
+.flex-row {
+  align-items: flex-start;
+  display: flex;
+  height: 37px;
+  min-width: 494px;
+}
+
+.place {
+  cursor: pointer;
+  letter-spacing: 0;
+  line-height: 37px;
+  min-width: 63px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.place:hover {
+  color: #8f2b6a
+}
+
+.servicios {
+  cursor: pointer;
+  letter-spacing: 0;
+  line-height: 37px;
+  margin-left: 16px;
+  min-width: 92px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.servicios:hover,
+.veterinarios:hover,
+.about:hover,
+.contacto:hover {
+  color: #8F2B6A
+}
+
+.veterinarios {
+  cursor: pointer;
+  letter-spacing: 0;
+  line-height: 37px;
+  margin-left: 12px;
+  min-width: 124px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.about {
+  cursor: pointer;
+  letter-spacing: 0;
+  line-height: 37px;
+  margin-left: 12px;
+  min-width: 64px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.contacto {
+  cursor: pointer;
+  letter-spacing: 0;
+  line-height: 37px;
+  margin-left: 15px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+

@@ -1,0 +1,46 @@
+.boton-contactanos-1 {
+  height: 55.61px;
+  position: relative;
+  width: 174.43px;
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+}
+
+
+
+.contactanos-container-1 {
+  border-radius: 11px;
+  height: 56px;
+  position: relative;
+  width: 174px;
+}
+
+.boton-contactanos-2 {
+  background-color: var(--x2d2d2d);
+  border-radius: 11px;
+  cursor: pointer;
+  height: 56px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: all 0.2s ease;
+  width: 174px;
+}
+
+.boton-contactanos-2:hover,
+.contactanos-1:hover {
+  transform: scale(0.9); 
+}
+
+.contactanos-1 {
+  cursor: pointer;
+  left: 19px;
+  letter-spacing: 0;
+  line-height: 37px;
+  position: absolute;
+  top: 8px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+

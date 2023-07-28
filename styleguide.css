@@ -1,0 +1,191 @@
+:root { 
+  --alabaster: #fafdfd;
+  --alto: #d9d9d9;
+  --black: #000000;
+  --blackcurrant: #2f2e3e;
+  --bombay: #b2b6bb36;
+  --bombay-2: #b2b6bb;
+  --camelot: #87275d;
+  --caribbean-green-pearl: #70d084;
+  --cta---aqua-squeeze: #e5f4f2;
+  --deviders---grey-: #d7d7d7;
+  --hawkes-blue: #dae2ff;
+  --manatee: #9093ae;
+  --mercury: #e4e7ea;
+  --mystic: #e5e8eb;
+  --neutral---zircon: #f8f9ff;
+  --neutral700: #374151;
+  --neutral900: #111827;
+  --onboarding-background-grey: #2d2d2d;
+  --saltpan: #f1fef4;
+  --submarine: #bfc3c9;
+  --tuatara: #353535;
+  --white: #ffffff;
+  --x2d2d2d: #831742;
+ 
+  --font-size-l: 17px;
+  --font-size-m: 16px;
+  --font-size-s: 14px;
+  --font-size-xl: 20px;
+  --font-size-xxl: 21px;
+  --font-size-xxxl: 28px;
+  --font-size-xxxxl: 38px;
+ 
+  --font-family-gotham_rounded-bold: "Gotham Rounded-Bold", Helvetica;
+  --font-family-gotham_rounded-book: "Gotham Rounded-Book", Helvetica;
+  --font-family-inter: "Inter", Helvetica;
+  --font-family-montserrat: "Montserrat", Helvetica;
+  --font-family-mulish: "Mulish", Helvetica;
+  --font-family-poppins: "Poppins", Helvetica;
+}
+.display-xs {
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.body-s {
+  font-family: var(--font-family-mulish);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.body-m {
+  font-family: var(--font-family-mulish);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.display-m {
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-xxxxl);
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: -0.76px;
+}
+
+.gothamrounded-book-normal-thunder-16px {
+  color: var(--onboarding-background-grey);
+  font-family: var(--font-family-gotham_rounded-book);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.gothamrounded-bold-thunder-28px {
+  color: var(--onboarding-background-grey);
+  font-family: var(--font-family-gotham_rounded-bold);
+  font-size: var(--font-size-xxxl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.poppins-semi-bold-claret-16px {
+  color: var(--x2d2d2d);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.montserrat-semi-bold-white-20px {
+  color: var(--white);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.gothamrounded-bold-black-38px {
+  color: var(--black);
+  font-family: var(--font-family-gotham_rounded-bold);
+  font-size: var(--font-size-xxxxl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.gothamrounded-bold-white-48px {
+  color: var(--white);
+  font-family: var(--font-family-gotham_rounded-bold);
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.poppins-semi-bold-white-16px {
+  color: var(--white);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.gothamrounded-bold-camelot-18px {
+  color: var(--camelot);
+  font-family: var(--font-family-gotham_rounded-bold);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.gothamrounded-book-normal-white-20px {
+  color: var(--white);
+  font-family: var(--font-family-gotham_rounded-book);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.montserrat-semi-bold-alabaster-21px {
+  color: var(--alabaster);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.inter-bold-tuatara-17px {
+  color: var(--tuatara);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.inter-bold-white-17px {
+  color: var(--white);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.gothamrounded-bold-thunder-38px {
+  color: var(--onboarding-background-grey);
+  font-family: var(--font-family-gotham_rounded-bold);
+  font-size: var(--font-size-xxxxl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.inter-semi-bold-manatee-14px {
+  color: var(--manatee);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.gothamrounded-book-normal-bright-gray-14px {
+  color: var(--neutral700);
+  font-family: var(--font-family-gotham_rounded-book);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+}
