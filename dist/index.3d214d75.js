@@ -27102,9 +27102,17 @@ var _landingPageV1Mobile = require("./components/LandingPageV1Mobile");
 var _landingPageV1MobileDefault = parcelHelpers.interopDefault(_landingPageV1Mobile);
 var _macBookAir1 = require("./components/MacBookAir1");
 var _macBookAir1Default = parcelHelpers.interopDefault(_macBookAir1);
+var _s = $RefreshSig$();
 function App() {
-    const isMobileScreen = window.innerWidth < 600; // Adjust the breakpoint to your desired width
-    console.log("Is Mobile Screen:", isMobileScreen);
+    _s();
+    const [isMobileScreen, setIsMobileScreen] = (0, _react.useState)(window.innerWidth < 600);
+    (0, _react.useEffect)(()=>{
+        function handleResize() {
+            setIsMobileScreen(window.innerWidth < 600);
+        }
+        window.addEventListener("resize", handleResize);
+        return ()=>window.removeEventListener("resize", handleResize);
+    }, []);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.BrowserRouter), {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Switch), {
             children: isMobileScreen ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
@@ -27113,12 +27121,12 @@ function App() {
                     ...landingPageV1MobileData
                 }, void 0, false, {
                     fileName: "App.jsx",
-                    lineNumber: 15,
+                    lineNumber: 25,
                     columnNumber: 7
                 }, this)
             }, void 0, false, {
                 fileName: "App.jsx",
-                lineNumber: 14,
+                lineNumber: 24,
                 columnNumber: 6
             }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
                 path: "/",
@@ -27126,25 +27134,26 @@ function App() {
                     ...macBookAir1Data
                 }, void 0, false, {
                     fileName: "App.jsx",
-                    lineNumber: 19,
+                    lineNumber: 29,
                     columnNumber: 7
                 }, this)
             }, void 0, false, {
                 fileName: "App.jsx",
-                lineNumber: 18,
+                lineNumber: 28,
                 columnNumber: 6
             }, this)
         }, void 0, false, {
             fileName: "App.jsx",
-            lineNumber: 12,
+            lineNumber: 22,
             columnNumber: 4
         }, this)
     }, void 0, false, {
         fileName: "App.jsx",
-        lineNumber: 11,
+        lineNumber: 21,
         columnNumber: 3
     }, this);
 }
+_s(App, "oBo5RcHxmiVxATZLwCJAGZ1xWUU=");
 _c = App;
 exports.default = App;
 const navbarData = {
@@ -27317,14 +27326,14 @@ const landingPageV1MobileData = {
             "Tu familia es importante ",
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                 fileName: "App.jsx",
-                lineNumber: 242,
+                lineNumber: 252,
                 columnNumber: 29
             }, undefined),
             "para nosotros"
         ]
     }, void 0, true, {
         fileName: "App.jsx",
-        lineNumber: 241,
+        lineNumber: 251,
         columnNumber: 3
     }, undefined),
     estamos24HorasAl: "Estamos 24 horas al d\xeda disponibles para la salud de tus mascotas.",
@@ -30681,8 +30690,41 @@ var _button2Default = parcelHelpers.interopDefault(_button2);
 var _footer22 = require("../Footer22");
 var _footer22Default = parcelHelpers.interopDefault(_footer22);
 var _landingPageV1MobileCss = require("./LandingPageV1Mobile.css");
+var _reactScroll = require("react-scroll");
+var _s = $RefreshSig$();
 function LandingPageV1Mobile(props) {
+    _s();
     const { clnicaVeterinaria , tuFamiliaEsImportanteParaNosotros , estamos24HorasAl , quServiciosOfrecemos , estamosAlServicio , unidadDeCuidadosIntensivos , imagenPorRayosXP , losMejoresMdicos , somosUnEquipoDeP , label , veterinarianPhoto , comunicateConNosotros , tenesAlgunaDudaS , conectateConNosotros , inputType1 , inputPlaceholder1 , inputType2 , inputPlaceholder2 , navbarProps , botonProps , group9Props , cardInfo1Props , button1Props , cardInfo2Props , button2Props , iconProps , button3Props , cardInfo3Props , button4Props , cardInfo4Props , button5Props , cardInfo5Props , button6Props , cardInfo6Props , button7Props , arrowRight1Props , testimonials22Props , phone221Props , phone222Props , inputField1Props , inputField2Props , arrowRight2Props , icon2Props , footer22Props  } = props;
+    const [formData, setFormData] = (0, _react.useState)({
+        name: "",
+        email: "",
+        phone: "",
+        message: ""
+    });
+    console.log("formData:", formData);
+    const handleChange = (e)=>{
+        const { name , value  } = e.target;
+        setFormData({
+            ...formData,
+            [name]: value
+        });
+    };
+    const handleSubmit = (e)=>{
+        e.preventDefault();
+        const emailParams = {
+            from_name: formData.name,
+            from_email: formData.email,
+            phone: formData.phone,
+            message: formData.message
+        };
+        emailjs.send("service_thtyy7j", "template_heo8e3s", emailParams, "uEVk4n9-pqI3wEa2Q").then((response)=>{
+            console.log("Email sent successfully:", response);
+            alert("Form submitted successfully!");
+        }, (error)=>{
+            console.error("Error sending email:", error);
+            alert("Form submission failed. Please try again later.");
+        });
+    };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "landing-page-v1-mobile screen",
         children: [
@@ -30693,8 +30735,8 @@ function LandingPageV1Mobile(props) {
                         children: navbarProps.children
                     }, void 0, false, {
                         fileName: "components/LandingPageV1Mobile/index.jsx",
-                        lineNumber: 69,
-                        columnNumber: 9
+                        lineNumber: 114,
+                        columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: "clinica-veterinaria",
@@ -30704,44 +30746,52 @@ function LandingPageV1Mobile(props) {
                                 children: clnicaVeterinaria
                             }, void 0, false, {
                                 fileName: "components/LandingPageV1Mobile/index.jsx",
-                                lineNumber: 71,
-                                columnNumber: 11
+                                lineNumber: 116,
+                                columnNumber: 6
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                 className: "tu-familia-es-importante-para-nosotros valign-text-middle",
                                 children: tuFamiliaEsImportanteParaNosotros
                             }, void 0, false, {
                                 fileName: "components/LandingPageV1Mobile/index.jsx",
-                                lineNumber: 72,
-                                columnNumber: 11
+                                lineNumber: 119,
+                                columnNumber: 6
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                 className: "estamos-24-horas-al gothamrounded-book-normal-white-20px",
                                 children: estamos24HorasAl
                             }, void 0, false, {
                                 fileName: "components/LandingPageV1Mobile/index.jsx",
-                                lineNumber: 75,
-                                columnNumber: 11
+                                lineNumber: 122,
+                                columnNumber: 6
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                 className: "cta",
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _botonDefault.default), {
-                                    children: botonProps.children
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactScroll.Link), {
+                                    to: "contacto",
+                                    smooth: true,
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _botonDefault.default), {
+                                        children: botonProps.children
+                                    }, void 0, false, {
+                                        fileName: "components/LandingPageV1Mobile/index.jsx",
+                                        lineNumber: 127,
+                                        columnNumber: 8
+                                    }, this)
                                 }, void 0, false, {
                                     fileName: "components/LandingPageV1Mobile/index.jsx",
-                                    lineNumber: 77,
-                                    columnNumber: 13
+                                    lineNumber: 126,
+                                    columnNumber: 7
                                 }, this)
                             }, void 0, false, {
                                 fileName: "components/LandingPageV1Mobile/index.jsx",
-                                lineNumber: 76,
-                                columnNumber: 11
+                                lineNumber: 125,
+                                columnNumber: 6
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "components/LandingPageV1Mobile/index.jsx",
-                        lineNumber: 70,
-                        columnNumber: 9
+                        lineNumber: 115,
+                        columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: "image",
@@ -30749,19 +30799,19 @@ function LandingPageV1Mobile(props) {
                             ...group9Props
                         }, void 0, false, {
                             fileName: "components/LandingPageV1Mobile/index.jsx",
-                            lineNumber: 81,
-                            columnNumber: 11
+                            lineNumber: 132,
+                            columnNumber: 6
                         }, this)
                     }, void 0, false, {
                         fileName: "components/LandingPageV1Mobile/index.jsx",
-                        lineNumber: 80,
-                        columnNumber: 9
+                        lineNumber: 131,
+                        columnNumber: 5
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "components/LandingPageV1Mobile/index.jsx",
-                lineNumber: 68,
-                columnNumber: 7
+                lineNumber: 113,
+                columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "features",
@@ -30774,229 +30824,166 @@ function LandingPageV1Mobile(props) {
                                 children: quServiciosOfrecemos
                             }, void 0, false, {
                                 fileName: "components/LandingPageV1Mobile/index.jsx",
-                                lineNumber: 86,
-                                columnNumber: 11
+                                lineNumber: 137,
+                                columnNumber: 6
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                 className: "estamos-al-servicio gothamrounded-book-normal-thunder-16px",
                                 children: estamosAlServicio
                             }, void 0, false, {
                                 fileName: "components/LandingPageV1Mobile/index.jsx",
-                                lineNumber: 87,
-                                columnNumber: 11
+                                lineNumber: 140,
+                                columnNumber: 6
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "components/LandingPageV1Mobile/index.jsx",
-                        lineNumber: 85,
-                        columnNumber: 9
+                        lineNumber: 136,
+                        columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: "feature-card",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardInfoDefault.default), {
-                                radiologa: cardInfo1Props.radiologa,
-                                iconProps: cardInfo1Props.iconProps
-                            }, void 0, false, {
-                                fileName: "components/LandingPageV1Mobile/index.jsx",
-                                lineNumber: 90,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
-                                arrowRightProps: button1Props.arrowRightProps
-                            }, void 0, false, {
-                                fileName: "components/LandingPageV1Mobile/index.jsx",
-                                lineNumber: 91,
-                                columnNumber: 11
-                            }, this)
-                        ]
-                    }, void 0, true, {
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardInfoDefault.default), {
+                            radiologa: cardInfo1Props.radiologa,
+                            iconProps: cardInfo1Props.iconProps
+                        }, void 0, false, {
+                            fileName: "components/LandingPageV1Mobile/index.jsx",
+                            lineNumber: 145,
+                            columnNumber: 6
+                        }, this)
+                    }, void 0, false, {
                         fileName: "components/LandingPageV1Mobile/index.jsx",
-                        lineNumber: 89,
-                        columnNumber: 9
+                        lineNumber: 144,
+                        columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: "feature-card",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardInfoDefault.default), {
-                                radiologa: cardInfo2Props.radiologa,
-                                iconProps: cardInfo2Props.iconProps
-                            }, void 0, false, {
-                                fileName: "components/LandingPageV1Mobile/index.jsx",
-                                lineNumber: 94,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
-                                arrowRightProps: button2Props.arrowRightProps
-                            }, void 0, false, {
-                                fileName: "components/LandingPageV1Mobile/index.jsx",
-                                lineNumber: 95,
-                                columnNumber: 11
-                            }, this)
-                        ]
-                    }, void 0, true, {
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardInfoDefault.default), {
+                            radiologa: cardInfo2Props.radiologa,
+                            iconProps: cardInfo2Props.iconProps
+                        }, void 0, false, {
+                            fileName: "components/LandingPageV1Mobile/index.jsx",
+                            lineNumber: 152,
+                            columnNumber: 6
+                        }, this)
+                    }, void 0, false, {
                         fileName: "components/LandingPageV1Mobile/index.jsx",
-                        lineNumber: 93,
-                        columnNumber: 9
+                        lineNumber: 151,
+                        columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: "feature-card",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "card-info",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _iconDefault.default), {
-                                        src: iconProps.src
-                                    }, void 0, false, {
-                                        fileName: "components/LandingPageV1Mobile/index.jsx",
-                                        lineNumber: 99,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                        className: "text",
-                                        children: [
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                                className: "unidad-de-cuidados-intensivos gothamrounded-bold-thunder-28px",
-                                                children: unidadDeCuidadosIntensivos
-                                            }, void 0, false, {
-                                                fileName: "components/LandingPageV1Mobile/index.jsx",
-                                                lineNumber: 101,
-                                                columnNumber: 15
-                                            }, this),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                                className: "imagen-por-rayos-x-p gothamrounded-book-normal-thunder-16px",
-                                                children: imagenPorRayosXP
-                                            }, void 0, false, {
-                                                fileName: "components/LandingPageV1Mobile/index.jsx",
-                                                lineNumber: 104,
-                                                columnNumber: 15
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "components/LandingPageV1Mobile/index.jsx",
-                                        lineNumber: 100,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "components/LandingPageV1Mobile/index.jsx",
-                                lineNumber: 98,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
-                                arrowRightProps: button3Props.arrowRightProps
-                            }, void 0, false, {
-                                fileName: "components/LandingPageV1Mobile/index.jsx",
-                                lineNumber: 107,
-                                columnNumber: 11
-                            }, this)
-                        ]
-                    }, void 0, true, {
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "card-info",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _iconDefault.default), {
+                                    src: iconProps.src
+                                }, void 0, false, {
+                                    fileName: "components/LandingPageV1Mobile/index.jsx",
+                                    lineNumber: 160,
+                                    columnNumber: 7
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "text",
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            className: "unidad-de-cuidados-intensivos gothamrounded-bold-thunder-28px",
+                                            children: unidadDeCuidadosIntensivos
+                                        }, void 0, false, {
+                                            fileName: "components/LandingPageV1Mobile/index.jsx",
+                                            lineNumber: 162,
+                                            columnNumber: 8
+                                        }, this),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                            className: "imagen-por-rayos-x-p gothamrounded-book-normal-thunder-16px",
+                                            children: imagenPorRayosXP
+                                        }, void 0, false, {
+                                            fileName: "components/LandingPageV1Mobile/index.jsx",
+                                            lineNumber: 165,
+                                            columnNumber: 8
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "components/LandingPageV1Mobile/index.jsx",
+                                    lineNumber: 161,
+                                    columnNumber: 7
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "components/LandingPageV1Mobile/index.jsx",
+                            lineNumber: 159,
+                            columnNumber: 6
+                        }, this)
+                    }, void 0, false, {
                         fileName: "components/LandingPageV1Mobile/index.jsx",
-                        lineNumber: 97,
-                        columnNumber: 9
+                        lineNumber: 158,
+                        columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: "feature-card",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardInfoDefault.default), {
-                                radiologa: cardInfo3Props.radiologa,
-                                iconProps: cardInfo3Props.iconProps
-                            }, void 0, false, {
-                                fileName: "components/LandingPageV1Mobile/index.jsx",
-                                lineNumber: 110,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
-                                arrowRightProps: button4Props.arrowRightProps
-                            }, void 0, false, {
-                                fileName: "components/LandingPageV1Mobile/index.jsx",
-                                lineNumber: 111,
-                                columnNumber: 11
-                            }, this)
-                        ]
-                    }, void 0, true, {
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardInfoDefault.default), {
+                            radiologa: cardInfo3Props.radiologa,
+                            iconProps: cardInfo3Props.iconProps
+                        }, void 0, false, {
+                            fileName: "components/LandingPageV1Mobile/index.jsx",
+                            lineNumber: 173,
+                            columnNumber: 6
+                        }, this)
+                    }, void 0, false, {
                         fileName: "components/LandingPageV1Mobile/index.jsx",
-                        lineNumber: 109,
-                        columnNumber: 9
+                        lineNumber: 172,
+                        columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: "feature-card",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardInfoDefault.default), {
-                                radiologa: cardInfo4Props.radiologa,
-                                iconProps: cardInfo4Props.iconProps
-                            }, void 0, false, {
-                                fileName: "components/LandingPageV1Mobile/index.jsx",
-                                lineNumber: 114,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
-                                arrowRightProps: button5Props.arrowRightProps
-                            }, void 0, false, {
-                                fileName: "components/LandingPageV1Mobile/index.jsx",
-                                lineNumber: 115,
-                                columnNumber: 11
-                            }, this)
-                        ]
-                    }, void 0, true, {
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardInfoDefault.default), {
+                            radiologa: cardInfo4Props.radiologa,
+                            iconProps: cardInfo4Props.iconProps
+                        }, void 0, false, {
+                            fileName: "components/LandingPageV1Mobile/index.jsx",
+                            lineNumber: 180,
+                            columnNumber: 6
+                        }, this)
+                    }, void 0, false, {
                         fileName: "components/LandingPageV1Mobile/index.jsx",
-                        lineNumber: 113,
-                        columnNumber: 9
+                        lineNumber: 179,
+                        columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: "feature-card",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardInfoDefault.default), {
-                                radiologa: cardInfo5Props.radiologa,
-                                iconProps: cardInfo5Props.iconProps
-                            }, void 0, false, {
-                                fileName: "components/LandingPageV1Mobile/index.jsx",
-                                lineNumber: 118,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
-                                arrowRightProps: button6Props.arrowRightProps
-                            }, void 0, false, {
-                                fileName: "components/LandingPageV1Mobile/index.jsx",
-                                lineNumber: 119,
-                                columnNumber: 11
-                            }, this)
-                        ]
-                    }, void 0, true, {
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardInfoDefault.default), {
+                            radiologa: cardInfo5Props.radiologa,
+                            iconProps: cardInfo5Props.iconProps
+                        }, void 0, false, {
+                            fileName: "components/LandingPageV1Mobile/index.jsx",
+                            lineNumber: 187,
+                            columnNumber: 6
+                        }, this)
+                    }, void 0, false, {
                         fileName: "components/LandingPageV1Mobile/index.jsx",
-                        lineNumber: 117,
-                        columnNumber: 9
+                        lineNumber: 186,
+                        columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: "feature-card",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardInfoDefault.default), {
-                                radiologa: cardInfo6Props.radiologa,
-                                iconProps: cardInfo6Props.iconProps
-                            }, void 0, false, {
-                                fileName: "components/LandingPageV1Mobile/index.jsx",
-                                lineNumber: 122,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
-                                arrowRightProps: button7Props.arrowRightProps
-                            }, void 0, false, {
-                                fileName: "components/LandingPageV1Mobile/index.jsx",
-                                lineNumber: 123,
-                                columnNumber: 11
-                            }, this)
-                        ]
-                    }, void 0, true, {
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardInfoDefault.default), {
+                            radiologa: cardInfo6Props.radiologa,
+                            iconProps: cardInfo6Props.iconProps
+                        }, void 0, false, {
+                            fileName: "components/LandingPageV1Mobile/index.jsx",
+                            lineNumber: 194,
+                            columnNumber: 6
+                        }, this)
+                    }, void 0, false, {
                         fileName: "components/LandingPageV1Mobile/index.jsx",
-                        lineNumber: 121,
-                        columnNumber: 9
+                        lineNumber: 193,
+                        columnNumber: 5
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "components/LandingPageV1Mobile/index.jsx",
-                lineNumber: 84,
-                columnNumber: 7
+                lineNumber: 135,
+                columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "team-section",
@@ -31012,67 +30999,35 @@ function LandingPageV1Mobile(props) {
                                         children: losMejoresMdicos
                                     }, void 0, false, {
                                         fileName: "components/LandingPageV1Mobile/index.jsx",
-                                        lineNumber: 129,
-                                        columnNumber: 13
+                                        lineNumber: 204,
+                                        columnNumber: 7
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                         className: "somos-un-equipo-de-p gothamrounded-book-normal-thunder-16px",
                                         children: somosUnEquipoDeP
                                     }, void 0, false, {
                                         fileName: "components/LandingPageV1Mobile/index.jsx",
-                                        lineNumber: 130,
-                                        columnNumber: 13
+                                        lineNumber: 205,
+                                        columnNumber: 7
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "components/LandingPageV1Mobile/index.jsx",
-                                lineNumber: 128,
-                                columnNumber: 11
+                                lineNumber: 203,
+                                columnNumber: 6
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "ct-as",
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                                    href: "https://www.animaapp.com/?utm_source=figma-samples&utm_campaign=figma-lp-ui-kit&utm_medium=figma-samples",
-                                    target: "_blank",
-                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                        className: "button",
-                                        children: [
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _arrowRightDefault.default), {
-                                                className: arrowRight1Props.className
-                                            }, void 0, false, {
-                                                fileName: "components/LandingPageV1Mobile/index.jsx",
-                                                lineNumber: 138,
-                                                columnNumber: 17
-                                            }, this),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                                className: "label poppins-semi-bold-white-16px",
-                                                children: label
-                                            }, void 0, false, {
-                                                fileName: "components/LandingPageV1Mobile/index.jsx",
-                                                lineNumber: 139,
-                                                columnNumber: 17
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "components/LandingPageV1Mobile/index.jsx",
-                                        lineNumber: 137,
-                                        columnNumber: 15
-                                    }, this)
-                                }, void 0, false, {
-                                    fileName: "components/LandingPageV1Mobile/index.jsx",
-                                    lineNumber: 133,
-                                    columnNumber: 13
-                                }, this)
+                                className: "ct-as"
                             }, void 0, false, {
                                 fileName: "components/LandingPageV1Mobile/index.jsx",
-                                lineNumber: 132,
-                                columnNumber: 11
+                                lineNumber: 209,
+                                columnNumber: 6
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "components/LandingPageV1Mobile/index.jsx",
-                        lineNumber: 127,
-                        columnNumber: 9
+                        lineNumber: 202,
+                        columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: "veterinarian-photo",
@@ -31083,8 +31038,8 @@ function LandingPageV1Mobile(props) {
                                     className: "photo-background"
                                 }, void 0, false, {
                                     fileName: "components/LandingPageV1Mobile/index.jsx",
-                                    lineNumber: 146,
-                                    columnNumber: 13
+                                    lineNumber: 225,
+                                    columnNumber: 7
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                                     className: "veterinarian-photo-1",
@@ -31092,30 +31047,30 @@ function LandingPageV1Mobile(props) {
                                     alt: "Veterinarian photo"
                                 }, void 0, false, {
                                     fileName: "components/LandingPageV1Mobile/index.jsx",
-                                    lineNumber: 147,
-                                    columnNumber: 13
+                                    lineNumber: 226,
+                                    columnNumber: 7
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _patientsCardDefault.default), {}, void 0, false, {
                                     fileName: "components/LandingPageV1Mobile/index.jsx",
-                                    lineNumber: 148,
-                                    columnNumber: 13
+                                    lineNumber: 231,
+                                    columnNumber: 7
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "components/LandingPageV1Mobile/index.jsx",
-                            lineNumber: 145,
-                            columnNumber: 11
+                            lineNumber: 224,
+                            columnNumber: 6
                         }, this)
                     }, void 0, false, {
                         fileName: "components/LandingPageV1Mobile/index.jsx",
-                        lineNumber: 144,
-                        columnNumber: 9
+                        lineNumber: 223,
+                        columnNumber: 5
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "components/LandingPageV1Mobile/index.jsx",
-                lineNumber: 126,
-                columnNumber: 7
+                lineNumber: 201,
+                columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _testimonials22Default.default), {
                 realStoriesFromSatisfiedCustomers: testimonials22Props.realStoriesFromSatisfiedCustomers,
@@ -31124,11 +31079,12 @@ function LandingPageV1Mobile(props) {
                 testimonialCard22Props: testimonials22Props.testimonialCard22Props
             }, void 0, false, {
                 fileName: "components/LandingPageV1Mobile/index.jsx",
-                lineNumber: 152,
-                columnNumber: 7
+                lineNumber: 235,
+                columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "contact-form",
+                id: "contacto",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                     className: "contact-form-1",
                     children: [
@@ -31146,22 +31102,22 @@ function LandingPageV1Mobile(props) {
                                                     children: comunicateConNosotros
                                                 }, void 0, false, {
                                                     fileName: "components/LandingPageV1Mobile/index.jsx",
-                                                    lineNumber: 163,
-                                                    columnNumber: 17
+                                                    lineNumber: 248,
+                                                    columnNumber: 9
                                                 }, this),
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                                     className: "tenes-alguna-duda-s body-m",
                                                     children: tenesAlgunaDudaS
                                                 }, void 0, false, {
                                                     fileName: "components/LandingPageV1Mobile/index.jsx",
-                                                    lineNumber: 164,
-                                                    columnNumber: 17
+                                                    lineNumber: 251,
+                                                    columnNumber: 9
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "components/LandingPageV1Mobile/index.jsx",
-                                            lineNumber: 162,
-                                            columnNumber: 15
+                                            lineNumber: 247,
+                                            columnNumber: 8
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                             className: "contact-details",
@@ -31170,27 +31126,27 @@ function LandingPageV1Mobile(props) {
                                                     text5: phone221Props.text5
                                                 }, void 0, false, {
                                                     fileName: "components/LandingPageV1Mobile/index.jsx",
-                                                    lineNumber: 167,
-                                                    columnNumber: 17
+                                                    lineNumber: 254,
+                                                    columnNumber: 9
                                                 }, this),
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phone22Default.default), {
                                                     text5: phone222Props.text5
                                                 }, void 0, false, {
                                                     fileName: "components/LandingPageV1Mobile/index.jsx",
-                                                    lineNumber: 168,
-                                                    columnNumber: 17
+                                                    lineNumber: 255,
+                                                    columnNumber: 9
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "components/LandingPageV1Mobile/index.jsx",
-                                            lineNumber: 166,
-                                            columnNumber: 15
+                                            lineNumber: 253,
+                                            columnNumber: 8
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "components/LandingPageV1Mobile/index.jsx",
-                                    lineNumber: 161,
-                                    columnNumber: 13
+                                    lineNumber: 246,
+                                    columnNumber: 7
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                     className: "social-media",
@@ -31200,13 +31156,13 @@ function LandingPageV1Mobile(props) {
                                             children: conectateConNosotros
                                         }, void 0, false, {
                                             fileName: "components/LandingPageV1Mobile/index.jsx",
-                                            lineNumber: 172,
-                                            columnNumber: 15
+                                            lineNumber: 259,
+                                            columnNumber: 8
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                             className: "social-links",
                                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                                                href: "https://www.instagram.com/animaapp/",
+                                                href: "https://www.instagram.com/vethome.pilar/",
                                                 target: "_blank",
                                                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                                                     className: "social-icons",
@@ -31214,30 +31170,30 @@ function LandingPageV1Mobile(props) {
                                                     alt: "Social Icons"
                                                 }, void 0, false, {
                                                     fileName: "components/LandingPageV1Mobile/index.jsx",
-                                                    lineNumber: 175,
-                                                    columnNumber: 19
+                                                    lineNumber: 267,
+                                                    columnNumber: 10
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "components/LandingPageV1Mobile/index.jsx",
-                                                lineNumber: 174,
-                                                columnNumber: 17
+                                                lineNumber: 263,
+                                                columnNumber: 9
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "components/LandingPageV1Mobile/index.jsx",
-                                            lineNumber: 173,
-                                            columnNumber: 15
+                                            lineNumber: 262,
+                                            columnNumber: 8
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "components/LandingPageV1Mobile/index.jsx",
-                                    lineNumber: 171,
-                                    columnNumber: 13
+                                    lineNumber: 258,
+                                    columnNumber: 7
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "components/LandingPageV1Mobile/index.jsx",
-                            lineNumber: 160,
-                            columnNumber: 11
+                            lineNumber: 245,
+                            columnNumber: 6
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                             className: "typeforms-ct-as",
@@ -31251,8 +31207,8 @@ function LandingPageV1Mobile(props) {
                                             icon2Props: inputField1Props.icon2Props
                                         }, void 0, false, {
                                             fileName: "components/LandingPageV1Mobile/index.jsx",
-                                            lineNumber: 182,
-                                            columnNumber: 15
+                                            lineNumber: 278,
+                                            columnNumber: 8
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _inputFieldDefault.default), {
                                             inputType: inputField2Props.inputType,
@@ -31260,8 +31216,8 @@ function LandingPageV1Mobile(props) {
                                             icon2Props: inputField2Props.icon2Props
                                         }, void 0, false, {
                                             fileName: "components/LandingPageV1Mobile/index.jsx",
-                                            lineNumber: 187,
-                                            columnNumber: 15
+                                            lineNumber: 283,
+                                            columnNumber: 8
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                             className: "input-field",
@@ -31273,21 +31229,21 @@ function LandingPageV1Mobile(props) {
                                                             className: arrowRight2Props.className
                                                         }, void 0, false, {
                                                             fileName: "components/LandingPageV1Mobile/index.jsx",
-                                                            lineNumber: 194,
-                                                            columnNumber: 19
+                                                            lineNumber: 290,
+                                                            columnNumber: 10
                                                         }, this),
                                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                                             className: "divider"
                                                         }, void 0, false, {
                                                             fileName: "components/LandingPageV1Mobile/index.jsx",
-                                                            lineNumber: 195,
-                                                            columnNumber: 19
+                                                            lineNumber: 291,
+                                                            columnNumber: 10
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "components/LandingPageV1Mobile/index.jsx",
-                                                    lineNumber: 193,
-                                                    columnNumber: 17
+                                                    lineNumber: 289,
+                                                    columnNumber: 9
                                                 }, this),
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
                                                     className: "telfono body-m",
@@ -31297,14 +31253,14 @@ function LandingPageV1Mobile(props) {
                                                     required: true
                                                 }, void 0, false, {
                                                     fileName: "components/LandingPageV1Mobile/index.jsx",
-                                                    lineNumber: 197,
-                                                    columnNumber: 17
+                                                    lineNumber: 293,
+                                                    columnNumber: 9
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "components/LandingPageV1Mobile/index.jsx",
-                                            lineNumber: 192,
-                                            columnNumber: 15
+                                            lineNumber: 288,
+                                            columnNumber: 8
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                             className: "input-field-1",
@@ -31313,8 +31269,8 @@ function LandingPageV1Mobile(props) {
                                                     className: icon2Props.className
                                                 }, void 0, false, {
                                                     fileName: "components/LandingPageV1Mobile/index.jsx",
-                                                    lineNumber: 206,
-                                                    columnNumber: 17
+                                                    lineNumber: 302,
+                                                    columnNumber: 9
                                                 }, this),
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
                                                     className: "mensaje body-m",
@@ -31324,57 +31280,58 @@ function LandingPageV1Mobile(props) {
                                                     required: true
                                                 }, void 0, false, {
                                                     fileName: "components/LandingPageV1Mobile/index.jsx",
-                                                    lineNumber: 207,
-                                                    columnNumber: 17
+                                                    lineNumber: 303,
+                                                    columnNumber: 9
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "components/LandingPageV1Mobile/index.jsx",
-                                            lineNumber: 205,
-                                            columnNumber: 15
+                                            lineNumber: 301,
+                                            columnNumber: 8
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "components/LandingPageV1Mobile/index.jsx",
-                                    lineNumber: 181,
-                                    columnNumber: 13
+                                    lineNumber: 277,
+                                    columnNumber: 7
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _button2Default.default), {}, void 0, false, {
                                     fileName: "components/LandingPageV1Mobile/index.jsx",
-                                    lineNumber: 216,
-                                    columnNumber: 13
+                                    lineNumber: 312,
+                                    columnNumber: 7
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "components/LandingPageV1Mobile/index.jsx",
-                            lineNumber: 180,
-                            columnNumber: 11
+                            lineNumber: 276,
+                            columnNumber: 6
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "components/LandingPageV1Mobile/index.jsx",
-                    lineNumber: 159,
-                    columnNumber: 9
+                    lineNumber: 244,
+                    columnNumber: 5
                 }, this)
             }, void 0, false, {
                 fileName: "components/LandingPageV1Mobile/index.jsx",
-                lineNumber: 158,
-                columnNumber: 7
+                lineNumber: 243,
+                columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footer22Default.default), {
                 children: footer22Props.children
             }, void 0, false, {
                 fileName: "components/LandingPageV1Mobile/index.jsx",
-                lineNumber: 220,
-                columnNumber: 7
+                lineNumber: 316,
+                columnNumber: 4
             }, this)
         ]
     }, void 0, true, {
         fileName: "components/LandingPageV1Mobile/index.jsx",
-        lineNumber: 67,
-        columnNumber: 5
+        lineNumber: 112,
+        columnNumber: 3
     }, this);
 }
+_s(LandingPageV1Mobile, "oob3yaSNaIwr/zvVswH3siDQmeI=");
 _c = LandingPageV1Mobile;
 exports.default = LandingPageV1Mobile;
 var _c;
@@ -31385,7 +31342,7 @@ $RefreshReg$(_c, "LandingPageV1Mobile");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../Navbar":"iGHAZ","../Boton":"bUfst","../Group9":"7skSq","../CardInfo":"iBGr9","../Button":"cxMY5","../Icon":"efBlU","../ArrowRight":"7MUFy","../PatientsCard":"2ORqZ","../Testimonials22":"3oDU7","../Phone22":"gbpHc","../InputField":"jkhPM","../Icon2":"1MZoF","../Button2":"f26VG","../Footer22":"g0FHE","./LandingPageV1Mobile.css":"gnZ4F","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iGHAZ":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../Navbar":"iGHAZ","../Boton":"bUfst","../Group9":"7skSq","../CardInfo":"iBGr9","../Button":"cxMY5","../Icon":"efBlU","../ArrowRight":"7MUFy","../PatientsCard":"2ORqZ","../Testimonials22":"3oDU7","../Phone22":"gbpHc","../InputField":"jkhPM","../Icon2":"1MZoF","../Button2":"f26VG","../Footer22":"g0FHE","./LandingPageV1Mobile.css":"gnZ4F","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-scroll":"2D4g1"}],"iGHAZ":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$eb27 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -32743,1009 +32700,7 @@ $RefreshReg$(_c, "Footer22");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./Footer22.css":"kryYF","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kryYF":[function() {},{}],"gnZ4F":[function() {},{}],"kbhy5":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$86bc = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$86bc.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _navbarLinks = require("../NavbarLinks");
-var _navbarLinksDefault = parcelHelpers.interopDefault(_navbarLinks);
-var _frame1 = require("../Frame1");
-var _frame1Default = parcelHelpers.interopDefault(_frame1);
-var _cardInfo2 = require("../CardInfo2");
-var _cardInfo2Default = parcelHelpers.interopDefault(_cardInfo2);
-var _button = require("../Button");
-var _buttonDefault = parcelHelpers.interopDefault(_button);
-var _featureCard = require("../FeatureCard");
-var _featureCardDefault = parcelHelpers.interopDefault(_featureCard);
-var _cardInfo4 = require("../CardInfo4");
-var _cardInfo4Default = parcelHelpers.interopDefault(_cardInfo4);
-var _icon = require("../Icon");
-var _iconDefault = parcelHelpers.interopDefault(_icon);
-var _veterinarianCard = require("../VeterinarianCard");
-var _veterinarianCardDefault = parcelHelpers.interopDefault(_veterinarianCard);
-var _patientsCard = require("../PatientsCard");
-var _patientsCardDefault = parcelHelpers.interopDefault(_patientsCard);
-var _cardsRow = require("../CardsRow");
-var _cardsRowDefault = parcelHelpers.interopDefault(_cardsRow);
-var _testimonials = require("../Testimonials");
-var _testimonialsDefault = parcelHelpers.interopDefault(_testimonials);
-var _contactDetails = require("../ContactDetails");
-var _contactDetailsDefault = parcelHelpers.interopDefault(_contactDetails);
-var _inputField = require("../InputField");
-var _inputFieldDefault = parcelHelpers.interopDefault(_inputField);
-var _inputFieldEmail = require("../InputFieldEmail");
-var _inputFieldEmailDefault = parcelHelpers.interopDefault(_inputFieldEmail);
-var _inputFieldPhone = require("../InputFieldPhone");
-var _inputFieldPhoneDefault = parcelHelpers.interopDefault(_inputFieldPhone);
-var _icon2 = require("../Icon2");
-var _icon2Default = parcelHelpers.interopDefault(_icon2);
-var _iconMensaje = require("../IconMensaje");
-var _iconMensajeDefault = parcelHelpers.interopDefault(_iconMensaje);
-var _button2 = require("../Button2");
-var _button2Default = parcelHelpers.interopDefault(_button2);
-var _footer = require("../Footer");
-var _footerDefault = parcelHelpers.interopDefault(_footer);
-var _macBookAir1Css = require("./MacBookAir1.css");
-var _envelopesimple1Svg = require("../../dist/img/envelopesimple-1.svg");
-var _envelopesimple1SvgDefault = parcelHelpers.interopDefault(_envelopesimple1Svg);
-var _emailjsCom = require("emailjs-com");
-var _emailjsComDefault = parcelHelpers.interopDefault(_emailjsCom);
-var _s = $RefreshSig$();
-function MacBookAir1(props) {
-    _s();
-    const { vetHome , screenShot20230417At20422 , circuloNaranja , text3 , pacientesRegistrados , screen_Shot_20230722_At_17321 , bordercollie , drGuadalupePoggi , veterinaria , disponibleParaConsulta , screenShot20230417At20152 , features , estamosAlServicio , petShop , alimentosAccesorio , veterinarianPhoto , comunicateConNosotros , tenesAlgunaDudaS , connectWithUs , inputType , inputPlaceholder , frame1Props , cardInfo21Props , button1Props , featureCardProps , cardInfo4Props , button2Props , cardInfo22Props , button3Props , cardInfo23Props , button4Props , cardInfo24Props , button5Props , iconProps , button6Props , veterinarianCardProps , patientsCardProps , testimonialsProps , contactDetailsProps , inputField1Props , inputField2Props , inputField3Props , icon2Props , footerProps , sectionToScrollRef  } = props;
-    const [formData, setFormData] = (0, _react.useState)({
-        name: "",
-        email: "",
-        phone: "",
-        message: ""
-    });
-    console.log("formData:", formData);
-    const handleChange = (e)=>{
-        const { name , value  } = e.target;
-        setFormData({
-            ...formData,
-            [name]: value
-        });
-    };
-    const handleSubmit = (e)=>{
-        e.preventDefault();
-        const emailParams = {
-            from_name: formData.name,
-            from_email: formData.email,
-            phone: formData.phone,
-            message: formData.message
-        };
-        (0, _emailjsComDefault.default).send("service_thtyy7j", "template_heo8e3s", emailParams, "uEVk4n9-pqI3wEa2Q").then((response)=>{
-            console.log("Email sent successfully:", response);
-            alert("Form submitted successfully!");
-        }, (error)=>{
-            console.error("Error sending email:", error);
-            alert("Form submission failed. Please try again later.");
-        });
-    };
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
-        className: "macbook-air-1 screen",
-        name: "form1",
-        action: "form1",
-        method: "post",
-        onSubmit: handleSubmit,
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "navbar-1",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "logo",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "vet-home",
-                            children: vetHome
-                        }, void 0, false, {
-                            fileName: "components/MacBookAir1/index.jsx",
-                            lineNumber: 130,
-                            columnNumber: 6
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "components/MacBookAir1/index.jsx",
-                        lineNumber: 129,
-                        columnNumber: 5
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "navigation-menu",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navbarLinksDefault.default), {}, void 0, false, {
-                            fileName: "components/MacBookAir1/index.jsx",
-                            lineNumber: 133,
-                            columnNumber: 6
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "components/MacBookAir1/index.jsx",
-                        lineNumber: 132,
-                        columnNumber: 5
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "components/MacBookAir1/index.jsx",
-                lineNumber: 128,
-                columnNumber: 4
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "hero-section-1",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _frame1Default.default), {
-                        botonContactanosProps: frame1Props.botonContactanosProps
-                    }, void 0, false, {
-                        fileName: "components/MacBookAir1/index.jsx",
-                        lineNumber: 137,
-                        columnNumber: 5
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "group-6",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "overlap-group5",
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "overlap-group2-1",
-                                    children: [
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                            className: "ellipse-2-1"
-                                        }, void 0, false, {
-                                            fileName: "components/MacBookAir1/index.jsx",
-                                            lineNumber: 141,
-                                            columnNumber: 8
-                                        }, this),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                            className: "ellipse-3-1"
-                                        }, void 0, false, {
-                                            fileName: "components/MacBookAir1/index.jsx",
-                                            lineNumber: 142,
-                                            columnNumber: 8
-                                        }, this),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                            className: "rectangle-7-2"
-                                        }, void 0, false, {
-                                            fileName: "components/MacBookAir1/index.jsx",
-                                            lineNumber: 143,
-                                            columnNumber: 8
-                                        }, this),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                                            className: "screen-shot-2023-04-17-at-2042-2-1",
-                                            src: screenShot20230417At20422,
-                                            alt: "Screen Shot 2023-04-17 at 20.42 2"
-                                        }, void 0, false, {
-                                            fileName: "components/MacBookAir1/index.jsx",
-                                            lineNumber: 144,
-                                            columnNumber: 8
-                                        }, this),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                            className: "overlap-group-3",
-                                            children: [
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                                    className: "overlap-group1-2",
-                                                    children: [
-                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                                                            className: "circulo-naranja",
-                                                            src: circuloNaranja,
-                                                            alt: "circulo naranja"
-                                                        }, void 0, false, {
-                                                            fileName: "components/MacBookAir1/index.jsx",
-                                                            lineNumber: 151,
-                                                            columnNumber: 10
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                                            className: "ellipse-13"
-                                                        }, void 0, false, {
-                                                            fileName: "components/MacBookAir1/index.jsx",
-                                                            lineNumber: 156,
-                                                            columnNumber: 10
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                                            className: "text-3-1",
-                                                            children: text3
-                                                        }, void 0, false, {
-                                                            fileName: "components/MacBookAir1/index.jsx",
-                                                            lineNumber: 157,
-                                                            columnNumber: 10
-                                                        }, this)
-                                                    ]
-                                                }, void 0, true, {
-                                                    fileName: "components/MacBookAir1/index.jsx",
-                                                    lineNumber: 150,
-                                                    columnNumber: 9
-                                                }, this),
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                                    className: "pacientes-registrados-1",
-                                                    children: pacientesRegistrados
-                                                }, void 0, false, {
-                                                    fileName: "components/MacBookAir1/index.jsx",
-                                                    lineNumber: 159,
-                                                    columnNumber: 9
-                                                }, this)
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "components/MacBookAir1/index.jsx",
-                                            lineNumber: 149,
-                                            columnNumber: 8
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "components/MacBookAir1/index.jsx",
-                                    lineNumber: 140,
-                                    columnNumber: 7
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "overlap-group3-1",
-                                    children: [
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                            className: "rectangle-7-3"
-                                        }, void 0, false, {
-                                            fileName: "components/MacBookAir1/index.jsx",
-                                            lineNumber: 165,
-                                            columnNumber: 8
-                                        }, this),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                                            className: "screen_-shot_2023-07-22_at_1732-1",
-                                            src: screen_Shot_20230722_At_17321,
-                                            alt: "Screen_Shot_2023-07-22_at_17.32 1"
-                                        }, void 0, false, {
-                                            fileName: "components/MacBookAir1/index.jsx",
-                                            lineNumber: 166,
-                                            columnNumber: 8
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "components/MacBookAir1/index.jsx",
-                                    lineNumber: 164,
-                                    columnNumber: 7
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                                    className: "bordercollie-1",
-                                    src: bordercollie,
-                                    alt: "bordercollie"
-                                }, void 0, false, {
-                                    fileName: "components/MacBookAir1/index.jsx",
-                                    lineNumber: 172,
-                                    columnNumber: 7
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "overlap-group4-1",
-                                    children: [
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                            className: "overlap-group-container",
-                                            children: [
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                                    className: "overlap-group-4",
-                                                    children: [
-                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                                            className: "dr-guadalupe-poggi-1",
-                                                            children: drGuadalupePoggi
-                                                        }, void 0, false, {
-                                                            fileName: "components/MacBookAir1/index.jsx",
-                                                            lineNumber: 180,
-                                                            columnNumber: 10
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                                            className: "veterinaria-1",
-                                                            children: veterinaria
-                                                        }, void 0, false, {
-                                                            fileName: "components/MacBookAir1/index.jsx",
-                                                            lineNumber: 181,
-                                                            columnNumber: 10
-                                                        }, this)
-                                                    ]
-                                                }, void 0, true, {
-                                                    fileName: "components/MacBookAir1/index.jsx",
-                                                    lineNumber: 179,
-                                                    columnNumber: 9
-                                                }, this),
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                                    className: "overlap-group1-3",
-                                                    children: [
-                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                                            className: "rectangle-8-2"
-                                                        }, void 0, false, {
-                                                            fileName: "components/MacBookAir1/index.jsx",
-                                                            lineNumber: 184,
-                                                            columnNumber: 10
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                                            className: "disponible-para-consulta-1",
-                                                            children: disponibleParaConsulta
-                                                        }, void 0, false, {
-                                                            fileName: "components/MacBookAir1/index.jsx",
-                                                            lineNumber: 185,
-                                                            columnNumber: 10
-                                                        }, this)
-                                                    ]
-                                                }, void 0, true, {
-                                                    fileName: "components/MacBookAir1/index.jsx",
-                                                    lineNumber: 183,
-                                                    columnNumber: 9
-                                                }, this)
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "components/MacBookAir1/index.jsx",
-                                            lineNumber: 178,
-                                            columnNumber: 8
-                                        }, this),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                                            className: "screen-shot-2023-04-17-at-2015-2-1",
-                                            src: screenShot20230417At20152,
-                                            alt: "Screen Shot 2023-04-17 at 20.15 2"
-                                        }, void 0, false, {
-                                            fileName: "components/MacBookAir1/index.jsx",
-                                            lineNumber: 190,
-                                            columnNumber: 8
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "components/MacBookAir1/index.jsx",
-                                    lineNumber: 177,
-                                    columnNumber: 7
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "components/MacBookAir1/index.jsx",
-                            lineNumber: 139,
-                            columnNumber: 6
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "components/MacBookAir1/index.jsx",
-                        lineNumber: 138,
-                        columnNumber: 5
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "components/MacBookAir1/index.jsx",
-                lineNumber: 136,
-                columnNumber: 4
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "features-1",
-                id: "servicios",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "headline-subhead-3",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                                className: "features-2 gothamrounded-bold-black-38px",
-                                children: features
-                            }, void 0, false, {
-                                fileName: "components/MacBookAir1/index.jsx",
-                                lineNumber: 201,
-                                columnNumber: 6
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                className: "estamos-al-servicio-1",
-                                children: estamosAlServicio
-                            }, void 0, false, {
-                                fileName: "components/MacBookAir1/index.jsx",
-                                lineNumber: 204,
-                                columnNumber: 6
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "components/MacBookAir1/index.jsx",
-                        lineNumber: 200,
-                        columnNumber: 5
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "cards-row",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "feature-card-2",
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardInfo2Default.default), {
-                                    ecografa: cardInfo21Props.ecografa,
-                                    diagnsticoDeImge: cardInfo21Props.diagnsticoDeImge,
-                                    iconProps: cardInfo21Props.iconProps
-                                }, void 0, false, {
-                                    fileName: "components/MacBookAir1/index.jsx",
-                                    lineNumber: 208,
-                                    columnNumber: 7
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "components/MacBookAir1/index.jsx",
-                                lineNumber: 207,
-                                columnNumber: 6
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "frame-2",
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _featureCardDefault.default), {
-                                    cardInfo2Props: featureCardProps.cardInfo2Props,
-                                    buttonProps: featureCardProps.buttonProps
-                                }, void 0, false, {
-                                    fileName: "components/MacBookAir1/index.jsx",
-                                    lineNumber: 216,
-                                    columnNumber: 7
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "components/MacBookAir1/index.jsx",
-                                lineNumber: 215,
-                                columnNumber: 6
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "feature-card-3",
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardInfo4Default.default), {
-                                    internacinYTratamiento: cardInfo4Props.internacinYTratamiento,
-                                    iconProps: cardInfo4Props.iconProps
-                                }, void 0, false, {
-                                    fileName: "components/MacBookAir1/index.jsx",
-                                    lineNumber: 222,
-                                    columnNumber: 7
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "components/MacBookAir1/index.jsx",
-                                lineNumber: 221,
-                                columnNumber: 6
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "components/MacBookAir1/index.jsx",
-                        lineNumber: 206,
-                        columnNumber: 5
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "cards-row",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "feature-card-1",
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardInfo2Default.default), {
-                                    ecografa: cardInfo22Props.ecografa,
-                                    diagnsticoDeImge: cardInfo22Props.diagnsticoDeImge,
-                                    iconProps: cardInfo22Props.iconProps
-                                }, void 0, false, {
-                                    fileName: "components/MacBookAir1/index.jsx",
-                                    lineNumber: 231,
-                                    columnNumber: 7
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "components/MacBookAir1/index.jsx",
-                                lineNumber: 230,
-                                columnNumber: 6
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "feature-card-1",
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardInfo2Default.default), {
-                                    ecografa: cardInfo23Props.ecografa,
-                                    diagnsticoDeImge: cardInfo23Props.diagnsticoDeImge,
-                                    iconProps: cardInfo23Props.iconProps
-                                }, void 0, false, {
-                                    fileName: "components/MacBookAir1/index.jsx",
-                                    lineNumber: 239,
-                                    columnNumber: 7
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "components/MacBookAir1/index.jsx",
-                                lineNumber: 238,
-                                columnNumber: 6
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "feature-card-1",
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardInfo2Default.default), {
-                                    ecografa: cardInfo24Props.ecografa,
-                                    diagnsticoDeImge: cardInfo24Props.diagnsticoDeImge,
-                                    iconProps: cardInfo24Props.iconProps
-                                }, void 0, false, {
-                                    fileName: "components/MacBookAir1/index.jsx",
-                                    lineNumber: 247,
-                                    columnNumber: 7
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "components/MacBookAir1/index.jsx",
-                                lineNumber: 246,
-                                columnNumber: 6
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "components/MacBookAir1/index.jsx",
-                        lineNumber: 229,
-                        columnNumber: 5
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "feature-card-5",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "card-info-2",
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _iconDefault.default), {
-                                    src: iconProps.src
-                                }, void 0, false, {
-                                    fileName: "components/MacBookAir1/index.jsx",
-                                    lineNumber: 257,
-                                    columnNumber: 7
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "text-4",
-                                    children: [
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                            className: "pet-shop-1 gothamrounded-bold-thunder-28px",
-                                            children: petShop
-                                        }, void 0, false, {
-                                            fileName: "components/MacBookAir1/index.jsx",
-                                            lineNumber: 259,
-                                            columnNumber: 8
-                                        }, this),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                            className: "alimentos-accesorio gothamrounded-book-normal-thunder-16px",
-                                            children: alimentosAccesorio
-                                        }, void 0, false, {
-                                            fileName: "components/MacBookAir1/index.jsx",
-                                            lineNumber: 262,
-                                            columnNumber: 8
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "components/MacBookAir1/index.jsx",
-                                    lineNumber: 258,
-                                    columnNumber: 7
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "components/MacBookAir1/index.jsx",
-                            lineNumber: 256,
-                            columnNumber: 6
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "components/MacBookAir1/index.jsx",
-                        lineNumber: 255,
-                        columnNumber: 5
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "components/MacBookAir1/index.jsx",
-                lineNumber: 199,
-                columnNumber: 4
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "team",
-                id: "veterinarios",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "veterinarian-photo-2",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "overlap-group5-1",
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "photo-background-1"
-                                }, void 0, false, {
-                                    fileName: "components/MacBookAir1/index.jsx",
-                                    lineNumber: 273,
-                                    columnNumber: 7
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                                    className: "veterinarian-photo-3",
-                                    src: veterinarianPhoto,
-                                    alt: "Veterinarian photo"
-                                }, void 0, false, {
-                                    fileName: "components/MacBookAir1/index.jsx",
-                                    lineNumber: 274,
-                                    columnNumber: 7
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _veterinarianCardDefault.default), {
-                                    screenShot20230417At20152: veterinarianCardProps.screenShot20230417At20152,
-                                    drGuadalupePoggio: veterinarianCardProps.drGuadalupePoggio,
-                                    veterinaria: veterinarianCardProps.veterinaria,
-                                    text2: veterinarianCardProps.text2,
-                                    star_37941581: veterinarianCardProps.star_37941581,
-                                    x1200Pacientes: veterinarianCardProps.x1200Pacientes,
-                                    universidadDeBuenosAires: veterinarianCardProps.universidadDeBuenosAires
-                                }, void 0, false, {
-                                    fileName: "components/MacBookAir1/index.jsx",
-                                    lineNumber: 279,
-                                    columnNumber: 7
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _patientsCardDefault.default), {
-                                    className: patientsCardProps.className
-                                }, void 0, false, {
-                                    fileName: "components/MacBookAir1/index.jsx",
-                                    lineNumber: 292,
-                                    columnNumber: 7
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "components/MacBookAir1/index.jsx",
-                            lineNumber: 272,
-                            columnNumber: 6
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "components/MacBookAir1/index.jsx",
-                        lineNumber: 271,
-                        columnNumber: 5
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "headline-subhead-4",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardsRowDefault.default), {}, void 0, false, {
-                            fileName: "components/MacBookAir1/index.jsx",
-                            lineNumber: 296,
-                            columnNumber: 6
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "components/MacBookAir1/index.jsx",
-                        lineNumber: 295,
-                        columnNumber: 5
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "components/MacBookAir1/index.jsx",
-                lineNumber: 270,
-                columnNumber: 4
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                id: "about"
-            }, void 0, false, {
-                fileName: "components/MacBookAir1/index.jsx",
-                lineNumber: 299,
-                columnNumber: 4
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _testimonialsDefault.default), {
-                realStoriesFromSatisfiedCustomers: testimonialsProps.realStoriesFromSatisfiedCustomers,
-                seeHowOurLanding: testimonialsProps.seeHowOurLanding,
-                testimonialCard1Props: testimonialsProps.testimonialCard1Props,
-                testimonialCard2Props: testimonialsProps.testimonialCard2Props
-            }, void 0, false, {
-                fileName: "components/MacBookAir1/index.jsx",
-                lineNumber: 300,
-                columnNumber: 4
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "contact-form-2",
-                id: "contacto",
-                ref: sectionToScrollRef,
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "contact-form-3",
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "header-3",
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "headline-subhead-5",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                        className: "comunicate-con-nosotros-1 display-m",
-                                        children: comunicateConNosotros
-                                    }, void 0, false, {
-                                        fileName: "components/MacBookAir1/index.jsx",
-                                        lineNumber: 312,
-                                        columnNumber: 8
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                        className: "tenes-alguna-duda-s-1 body-m",
-                                        children: tenesAlgunaDudaS
-                                    }, void 0, false, {
-                                        fileName: "components/MacBookAir1/index.jsx",
-                                        lineNumber: 315,
-                                        columnNumber: 8
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "components/MacBookAir1/index.jsx",
-                                lineNumber: 311,
-                                columnNumber: 7
-                            }, this)
-                        }, void 0, false, {
-                            fileName: "components/MacBookAir1/index.jsx",
-                            lineNumber: 310,
-                            columnNumber: 6
-                        }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "header-4",
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "contact-details-1",
-                                    children: [
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _contactDetailsDefault.default), {
-                                            phone1Props: contactDetailsProps.phone1Props,
-                                            phone2Props: contactDetailsProps.phone2Props
-                                        }, void 0, false, {
-                                            fileName: "components/MacBookAir1/index.jsx",
-                                            lineNumber: 320,
-                                            columnNumber: 8
-                                        }, this),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                            className: "social-media-1",
-                                            children: [
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                                    className: "connect-with-us display-xs",
-                                                    children: connectWithUs
-                                                }, void 0, false, {
-                                                    fileName: "components/MacBookAir1/index.jsx",
-                                                    lineNumber: 325,
-                                                    columnNumber: 9
-                                                }, this),
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                                    className: "social-links-1",
-                                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                                                        href: "https://www.instagram.com/vethome.pilar/",
-                                                        target: "_blank",
-                                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                                                            className: "social-icons-1",
-                                                            src: "/img/social-icons.svg",
-                                                            alt: "Social Icons"
-                                                        }, void 0, false, {
-                                                            fileName: "components/MacBookAir1/index.jsx",
-                                                            lineNumber: 333,
-                                                            columnNumber: 11
-                                                        }, this)
-                                                    }, void 0, false, {
-                                                        fileName: "components/MacBookAir1/index.jsx",
-                                                        lineNumber: 329,
-                                                        columnNumber: 10
-                                                    }, this)
-                                                }, void 0, false, {
-                                                    fileName: "components/MacBookAir1/index.jsx",
-                                                    lineNumber: 328,
-                                                    columnNumber: 9
-                                                }, this)
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "components/MacBookAir1/index.jsx",
-                                            lineNumber: 324,
-                                            columnNumber: 8
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "components/MacBookAir1/index.jsx",
-                                    lineNumber: 319,
-                                    columnNumber: 7
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "input-fields-button",
-                                    children: [
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                            className: "input-fields",
-                                            children: [
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _inputFieldDefault.default), {
-                                                    value: formData.name,
-                                                    onChange: handleChange,
-                                                    required: true,
-                                                    name: "name",
-                                                    inputType: inputField1Props.inputType,
-                                                    inputPlaceholder: "Nombre Completo",
-                                                    icon2Props: inputField1Props.icon2Props
-                                                }, void 0, false, {
-                                                    fileName: "components/MacBookAir1/index.jsx",
-                                                    lineNumber: 344,
-                                                    columnNumber: 9
-                                                }, this),
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _inputFieldEmailDefault.default), {
-                                                    inputType: inputField2Props.inputType,
-                                                    inputPlaceholder: inputField2Props.inputPlaceholder,
-                                                    icon2Props: inputField2Props.icon2Props,
-                                                    name: "email",
-                                                    value: formData.email,
-                                                    onChange: handleChange,
-                                                    required: true
-                                                }, void 0, false, {
-                                                    fileName: "components/MacBookAir1/index.jsx",
-                                                    lineNumber: 353,
-                                                    columnNumber: 9
-                                                }, this),
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _inputFieldPhoneDefault.default), {
-                                                    inputType: inputField3Props.inputType,
-                                                    inputPlaceholder: "Tel\xe9fono",
-                                                    icon2Props: inputField3Props.icon2Props,
-                                                    value: formData.phone,
-                                                    onChange: handleChange,
-                                                    name: "phone",
-                                                    required: true
-                                                }, void 0, false, {
-                                                    fileName: "components/MacBookAir1/index.jsx",
-                                                    lineNumber: 362,
-                                                    columnNumber: 9
-                                                }, this),
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                                    className: "input-field-4",
-                                                    children: [
-                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _iconMensajeDefault.default), {
-                                                            className: icon2Props.className
-                                                        }, void 0, false, {
-                                                            fileName: "components/MacBookAir1/index.jsx",
-                                                            lineNumber: 372,
-                                                            columnNumber: 10
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("textarea", {
-                                                            className: "mensaje-1 body-m",
-                                                            placeholder: "Mensaje",
-                                                            type: "text",
-                                                            required: true,
-                                                            name: "message",
-                                                            value: formData.message,
-                                                            onChange: handleChange
-                                                        }, void 0, false, {
-                                                            fileName: "components/MacBookAir1/index.jsx",
-                                                            lineNumber: 373,
-                                                            columnNumber: 10
-                                                        }, this)
-                                                    ]
-                                                }, void 0, true, {
-                                                    fileName: "components/MacBookAir1/index.jsx",
-                                                    lineNumber: 371,
-                                                    columnNumber: 9
-                                                }, this)
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "components/MacBookAir1/index.jsx",
-                                            lineNumber: 343,
-                                            columnNumber: 8
-                                        }, this),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _button2Default.default), {
-                                            type: "submit"
-                                        }, void 0, false, {
-                                            fileName: "components/MacBookAir1/index.jsx",
-                                            lineNumber: 384,
-                                            columnNumber: 8
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "components/MacBookAir1/index.jsx",
-                                    lineNumber: 342,
-                                    columnNumber: 7
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "components/MacBookAir1/index.jsx",
-                            lineNumber: 318,
-                            columnNumber: 6
-                        }, this)
-                    ]
-                }, void 0, true, {
-                    fileName: "components/MacBookAir1/index.jsx",
-                    lineNumber: 309,
-                    columnNumber: 5
-                }, this)
-            }, void 0, false, {
-                fileName: "components/MacBookAir1/index.jsx",
-                lineNumber: 308,
-                columnNumber: 4
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerDefault.default), {
-                children: footerProps.children
-            }, void 0, false, {
-                fileName: "components/MacBookAir1/index.jsx",
-                lineNumber: 389,
-                columnNumber: 4
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "components/MacBookAir1/index.jsx",
-        lineNumber: 121,
-        columnNumber: 3
-    }, this);
-}
-_s(MacBookAir1, "oob3yaSNaIwr/zvVswH3siDQmeI=");
-_c = MacBookAir1;
-exports.default = MacBookAir1;
-var _c;
-$RefreshReg$(_c, "MacBookAir1");
-
-  $parcel$ReactRefreshHelpers$86bc.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../NavbarLinks":"c3ZXt","../Frame1":"2uxSD","../CardInfo2":"8GLi8","../Button":"cxMY5","../FeatureCard":"blGpq","../CardInfo4":"8VcqA","../Icon":"efBlU","../VeterinarianCard":"55Z9s","../PatientsCard":"2ORqZ","../CardsRow":"g4eW5","../Testimonials":"cJoZz","../ContactDetails":"bzZLP","../InputField":"jkhPM","../InputFieldEmail":"hfBxx","../InputFieldPhone":"4CepJ","../Icon2":"1MZoF","../IconMensaje":"c9xU3","../Button2":"f26VG","../Footer":"aMelp","./MacBookAir1.css":"5Swa7","../../dist/img/envelopesimple-1.svg":"dlXSw","emailjs-com":"18oDj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"c3ZXt":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$8a34 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$8a34.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _navbarLinksCss = require("./NavbarLinks.css");
-var _reactScroll = require("react-scroll");
-function NavbarLinks() {
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "navbar-links",
-        id: "navbar",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "flex-row montserrat-semi-bold-white-20px",
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactScroll.Link), {
-                    to: "navbar",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "place",
-                        children: "Home"
-                    }, void 0, false, {
-                        fileName: "components/NavbarLinks/index.jsx",
-                        lineNumber: 10,
-                        columnNumber: 6
-                    }, this)
-                }, void 0, false, {
-                    fileName: "components/NavbarLinks/index.jsx",
-                    lineNumber: 9,
-                    columnNumber: 5
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactScroll.Link), {
-                    to: "servicios",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "servicios",
-                        children: "Servicios"
-                    }, void 0, false, {
-                        fileName: "components/NavbarLinks/index.jsx",
-                        lineNumber: 13,
-                        columnNumber: 6
-                    }, this)
-                }, void 0, false, {
-                    fileName: "components/NavbarLinks/index.jsx",
-                    lineNumber: 12,
-                    columnNumber: 5
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactScroll.Link), {
-                    to: "veterinarios",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "veterinarios",
-                        children: "Veterinarios"
-                    }, void 0, false, {
-                        fileName: "components/NavbarLinks/index.jsx",
-                        lineNumber: 16,
-                        columnNumber: 6
-                    }, this)
-                }, void 0, false, {
-                    fileName: "components/NavbarLinks/index.jsx",
-                    lineNumber: 15,
-                    columnNumber: 5
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactScroll.Link), {
-                    to: "about",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "about",
-                        children: "About"
-                    }, void 0, false, {
-                        fileName: "components/NavbarLinks/index.jsx",
-                        lineNumber: 19,
-                        columnNumber: 6
-                    }, this)
-                }, void 0, false, {
-                    fileName: "components/NavbarLinks/index.jsx",
-                    lineNumber: 18,
-                    columnNumber: 5
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactScroll.Link), {
-                    to: "contacto",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "contacto",
-                        children: "Contacto"
-                    }, void 0, false, {
-                        fileName: "components/NavbarLinks/index.jsx",
-                        lineNumber: 22,
-                        columnNumber: 6
-                    }, this)
-                }, void 0, false, {
-                    fileName: "components/NavbarLinks/index.jsx",
-                    lineNumber: 21,
-                    columnNumber: 5
-                }, this)
-            ]
-        }, void 0, true, {
-            fileName: "components/NavbarLinks/index.jsx",
-            lineNumber: 8,
-            columnNumber: 4
-        }, this)
-    }, void 0, false, {
-        fileName: "components/NavbarLinks/index.jsx",
-        lineNumber: 7,
-        columnNumber: 3
-    }, this);
-}
-_c = NavbarLinks;
-exports.default = NavbarLinks;
-var _c;
-$RefreshReg$(_c, "NavbarLinks");
-
-  $parcel$ReactRefreshHelpers$8a34.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./NavbarLinks.css":"gLI59","react-scroll":"2D4g1","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gLI59":[function() {},{}],"2D4g1":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./Footer22.css":"kryYF","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kryYF":[function() {},{}],"gnZ4F":[function() {},{}],"2D4g1":[function(require,module,exports) {
 "use strict";
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -35640,7 +34595,1009 @@ var Helpers = {
 };
 module.exports = Helpers;
 
-},{"react":"21dqq","react-dom":"j6uA9","./utils":"m3UYq","./scroll-spy":"aElHf","./scroller":"16SxC","prop-types":"7wKI2","./scroll-hash":"fX6qe"}],"2uxSD":[function(require,module,exports) {
+},{"react":"21dqq","react-dom":"j6uA9","./utils":"m3UYq","./scroll-spy":"aElHf","./scroller":"16SxC","prop-types":"7wKI2","./scroll-hash":"fX6qe"}],"kbhy5":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$86bc = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$86bc.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _navbarLinks = require("../NavbarLinks");
+var _navbarLinksDefault = parcelHelpers.interopDefault(_navbarLinks);
+var _frame1 = require("../Frame1");
+var _frame1Default = parcelHelpers.interopDefault(_frame1);
+var _cardInfo2 = require("../CardInfo2");
+var _cardInfo2Default = parcelHelpers.interopDefault(_cardInfo2);
+var _button = require("../Button");
+var _buttonDefault = parcelHelpers.interopDefault(_button);
+var _featureCard = require("../FeatureCard");
+var _featureCardDefault = parcelHelpers.interopDefault(_featureCard);
+var _cardInfo4 = require("../CardInfo4");
+var _cardInfo4Default = parcelHelpers.interopDefault(_cardInfo4);
+var _icon = require("../Icon");
+var _iconDefault = parcelHelpers.interopDefault(_icon);
+var _veterinarianCard = require("../VeterinarianCard");
+var _veterinarianCardDefault = parcelHelpers.interopDefault(_veterinarianCard);
+var _patientsCard = require("../PatientsCard");
+var _patientsCardDefault = parcelHelpers.interopDefault(_patientsCard);
+var _cardsRow = require("../CardsRow");
+var _cardsRowDefault = parcelHelpers.interopDefault(_cardsRow);
+var _testimonials = require("../Testimonials");
+var _testimonialsDefault = parcelHelpers.interopDefault(_testimonials);
+var _contactDetails = require("../ContactDetails");
+var _contactDetailsDefault = parcelHelpers.interopDefault(_contactDetails);
+var _inputField = require("../InputField");
+var _inputFieldDefault = parcelHelpers.interopDefault(_inputField);
+var _inputFieldEmail = require("../InputFieldEmail");
+var _inputFieldEmailDefault = parcelHelpers.interopDefault(_inputFieldEmail);
+var _inputFieldPhone = require("../InputFieldPhone");
+var _inputFieldPhoneDefault = parcelHelpers.interopDefault(_inputFieldPhone);
+var _icon2 = require("../Icon2");
+var _icon2Default = parcelHelpers.interopDefault(_icon2);
+var _iconMensaje = require("../IconMensaje");
+var _iconMensajeDefault = parcelHelpers.interopDefault(_iconMensaje);
+var _button2 = require("../Button2");
+var _button2Default = parcelHelpers.interopDefault(_button2);
+var _footer = require("../Footer");
+var _footerDefault = parcelHelpers.interopDefault(_footer);
+var _macBookAir1Css = require("./MacBookAir1.css");
+var _envelopesimple1Svg = require("../../dist/img/envelopesimple-1.svg");
+var _envelopesimple1SvgDefault = parcelHelpers.interopDefault(_envelopesimple1Svg);
+var _emailjsCom = require("emailjs-com");
+var _emailjsComDefault = parcelHelpers.interopDefault(_emailjsCom);
+var _s = $RefreshSig$();
+function MacBookAir1(props) {
+    _s();
+    const { vetHome , screenShot20230417At20422 , circuloNaranja , text3 , pacientesRegistrados , screen_Shot_20230722_At_17321 , bordercollie , drGuadalupePoggi , veterinaria , disponibleParaConsulta , screenShot20230417At20152 , features , estamosAlServicio , petShop , alimentosAccesorio , veterinarianPhoto , comunicateConNosotros , tenesAlgunaDudaS , connectWithUs , inputType , inputPlaceholder , frame1Props , cardInfo21Props , button1Props , featureCardProps , cardInfo4Props , button2Props , cardInfo22Props , button3Props , cardInfo23Props , button4Props , cardInfo24Props , button5Props , iconProps , button6Props , veterinarianCardProps , patientsCardProps , testimonialsProps , contactDetailsProps , inputField1Props , inputField2Props , inputField3Props , icon2Props , footerProps , sectionToScrollRef  } = props;
+    const [formData, setFormData] = (0, _react.useState)({
+        name: "",
+        email: "",
+        phone: "",
+        message: ""
+    });
+    console.log("formData:", formData);
+    const handleChange = (e)=>{
+        const { name , value  } = e.target;
+        setFormData({
+            ...formData,
+            [name]: value
+        });
+    };
+    const handleSubmit = (e)=>{
+        e.preventDefault();
+        const emailParams = {
+            from_name: formData.name,
+            from_email: formData.email,
+            phone: formData.phone,
+            message: formData.message
+        };
+        (0, _emailjsComDefault.default).send("service_thtyy7j", "template_heo8e3s", emailParams, "uEVk4n9-pqI3wEa2Q").then((response)=>{
+            console.log("Email sent successfully:", response);
+            alert("Form submitted successfully!");
+        }, (error)=>{
+            console.error("Error sending email:", error);
+            alert("Form submission failed. Please try again later.");
+        });
+    };
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
+        className: "macbook-air-1 screen",
+        name: "form1",
+        action: "form1",
+        method: "post",
+        onSubmit: handleSubmit,
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "navbar-1",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "logo",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "vet-home",
+                            children: vetHome
+                        }, void 0, false, {
+                            fileName: "components/MacBookAir1/index.jsx",
+                            lineNumber: 130,
+                            columnNumber: 6
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "components/MacBookAir1/index.jsx",
+                        lineNumber: 129,
+                        columnNumber: 5
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "navigation-menu",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navbarLinksDefault.default), {}, void 0, false, {
+                            fileName: "components/MacBookAir1/index.jsx",
+                            lineNumber: 133,
+                            columnNumber: 6
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "components/MacBookAir1/index.jsx",
+                        lineNumber: 132,
+                        columnNumber: 5
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "components/MacBookAir1/index.jsx",
+                lineNumber: 128,
+                columnNumber: 4
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "hero-section-1",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _frame1Default.default), {
+                        botonContactanosProps: frame1Props.botonContactanosProps
+                    }, void 0, false, {
+                        fileName: "components/MacBookAir1/index.jsx",
+                        lineNumber: 137,
+                        columnNumber: 5
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "group-6",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "overlap-group5",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "overlap-group2-1",
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            className: "ellipse-2-1"
+                                        }, void 0, false, {
+                                            fileName: "components/MacBookAir1/index.jsx",
+                                            lineNumber: 141,
+                                            columnNumber: 8
+                                        }, this),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            className: "ellipse-3-1"
+                                        }, void 0, false, {
+                                            fileName: "components/MacBookAir1/index.jsx",
+                                            lineNumber: 142,
+                                            columnNumber: 8
+                                        }, this),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            className: "rectangle-7-2"
+                                        }, void 0, false, {
+                                            fileName: "components/MacBookAir1/index.jsx",
+                                            lineNumber: 143,
+                                            columnNumber: 8
+                                        }, this),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                            className: "screen-shot-2023-04-17-at-2042-2-1",
+                                            src: screenShot20230417At20422,
+                                            alt: "Screen Shot 2023-04-17 at 20.42 2"
+                                        }, void 0, false, {
+                                            fileName: "components/MacBookAir1/index.jsx",
+                                            lineNumber: 144,
+                                            columnNumber: 8
+                                        }, this),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            className: "overlap-group-3",
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                    className: "overlap-group1-2",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                                            className: "circulo-naranja",
+                                                            src: circuloNaranja,
+                                                            alt: "circulo naranja"
+                                                        }, void 0, false, {
+                                                            fileName: "components/MacBookAir1/index.jsx",
+                                                            lineNumber: 151,
+                                                            columnNumber: 10
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                            className: "ellipse-13"
+                                                        }, void 0, false, {
+                                                            fileName: "components/MacBookAir1/index.jsx",
+                                                            lineNumber: 156,
+                                                            columnNumber: 10
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                            className: "text-3-1",
+                                                            children: text3
+                                                        }, void 0, false, {
+                                                            fileName: "components/MacBookAir1/index.jsx",
+                                                            lineNumber: 157,
+                                                            columnNumber: 10
+                                                        }, this)
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "components/MacBookAir1/index.jsx",
+                                                    lineNumber: 150,
+                                                    columnNumber: 9
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                    className: "pacientes-registrados-1",
+                                                    children: pacientesRegistrados
+                                                }, void 0, false, {
+                                                    fileName: "components/MacBookAir1/index.jsx",
+                                                    lineNumber: 159,
+                                                    columnNumber: 9
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "components/MacBookAir1/index.jsx",
+                                            lineNumber: 149,
+                                            columnNumber: 8
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "components/MacBookAir1/index.jsx",
+                                    lineNumber: 140,
+                                    columnNumber: 7
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "overlap-group3-1",
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            className: "rectangle-7-3"
+                                        }, void 0, false, {
+                                            fileName: "components/MacBookAir1/index.jsx",
+                                            lineNumber: 165,
+                                            columnNumber: 8
+                                        }, this),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                            className: "screen_-shot_2023-07-22_at_1732-1",
+                                            src: screen_Shot_20230722_At_17321,
+                                            alt: "Screen_Shot_2023-07-22_at_17.32 1"
+                                        }, void 0, false, {
+                                            fileName: "components/MacBookAir1/index.jsx",
+                                            lineNumber: 166,
+                                            columnNumber: 8
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "components/MacBookAir1/index.jsx",
+                                    lineNumber: 164,
+                                    columnNumber: 7
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                    className: "bordercollie-1",
+                                    src: bordercollie,
+                                    alt: "bordercollie"
+                                }, void 0, false, {
+                                    fileName: "components/MacBookAir1/index.jsx",
+                                    lineNumber: 172,
+                                    columnNumber: 7
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "overlap-group4-1",
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            className: "overlap-group-container",
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                    className: "overlap-group-4",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                            className: "dr-guadalupe-poggi-1",
+                                                            children: drGuadalupePoggi
+                                                        }, void 0, false, {
+                                                            fileName: "components/MacBookAir1/index.jsx",
+                                                            lineNumber: 180,
+                                                            columnNumber: 10
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                            className: "veterinaria-1",
+                                                            children: veterinaria
+                                                        }, void 0, false, {
+                                                            fileName: "components/MacBookAir1/index.jsx",
+                                                            lineNumber: 181,
+                                                            columnNumber: 10
+                                                        }, this)
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "components/MacBookAir1/index.jsx",
+                                                    lineNumber: 179,
+                                                    columnNumber: 9
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                    className: "overlap-group1-3",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                            className: "rectangle-8-2"
+                                                        }, void 0, false, {
+                                                            fileName: "components/MacBookAir1/index.jsx",
+                                                            lineNumber: 184,
+                                                            columnNumber: 10
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                            className: "disponible-para-consulta-1",
+                                                            children: disponibleParaConsulta
+                                                        }, void 0, false, {
+                                                            fileName: "components/MacBookAir1/index.jsx",
+                                                            lineNumber: 185,
+                                                            columnNumber: 10
+                                                        }, this)
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "components/MacBookAir1/index.jsx",
+                                                    lineNumber: 183,
+                                                    columnNumber: 9
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "components/MacBookAir1/index.jsx",
+                                            lineNumber: 178,
+                                            columnNumber: 8
+                                        }, this),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                            className: "screen-shot-2023-04-17-at-2015-2-1",
+                                            src: screenShot20230417At20152,
+                                            alt: "Screen Shot 2023-04-17 at 20.15 2"
+                                        }, void 0, false, {
+                                            fileName: "components/MacBookAir1/index.jsx",
+                                            lineNumber: 190,
+                                            columnNumber: 8
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "components/MacBookAir1/index.jsx",
+                                    lineNumber: 177,
+                                    columnNumber: 7
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "components/MacBookAir1/index.jsx",
+                            lineNumber: 139,
+                            columnNumber: 6
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "components/MacBookAir1/index.jsx",
+                        lineNumber: 138,
+                        columnNumber: 5
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "components/MacBookAir1/index.jsx",
+                lineNumber: 136,
+                columnNumber: 4
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "features-1",
+                id: "servicios",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "headline-subhead-3",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                                className: "features-2 gothamrounded-bold-black-38px",
+                                children: features
+                            }, void 0, false, {
+                                fileName: "components/MacBookAir1/index.jsx",
+                                lineNumber: 201,
+                                columnNumber: 6
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                className: "estamos-al-servicio-1",
+                                children: estamosAlServicio
+                            }, void 0, false, {
+                                fileName: "components/MacBookAir1/index.jsx",
+                                lineNumber: 204,
+                                columnNumber: 6
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "components/MacBookAir1/index.jsx",
+                        lineNumber: 200,
+                        columnNumber: 5
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "cards-row",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "feature-card-2",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardInfo2Default.default), {
+                                    ecografa: cardInfo21Props.ecografa,
+                                    diagnsticoDeImge: cardInfo21Props.diagnsticoDeImge,
+                                    iconProps: cardInfo21Props.iconProps
+                                }, void 0, false, {
+                                    fileName: "components/MacBookAir1/index.jsx",
+                                    lineNumber: 208,
+                                    columnNumber: 7
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "components/MacBookAir1/index.jsx",
+                                lineNumber: 207,
+                                columnNumber: 6
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "frame-2",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _featureCardDefault.default), {
+                                    cardInfo2Props: featureCardProps.cardInfo2Props,
+                                    buttonProps: featureCardProps.buttonProps
+                                }, void 0, false, {
+                                    fileName: "components/MacBookAir1/index.jsx",
+                                    lineNumber: 216,
+                                    columnNumber: 7
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "components/MacBookAir1/index.jsx",
+                                lineNumber: 215,
+                                columnNumber: 6
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "feature-card-3",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardInfo4Default.default), {
+                                    internacinYTratamiento: cardInfo4Props.internacinYTratamiento,
+                                    iconProps: cardInfo4Props.iconProps
+                                }, void 0, false, {
+                                    fileName: "components/MacBookAir1/index.jsx",
+                                    lineNumber: 222,
+                                    columnNumber: 7
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "components/MacBookAir1/index.jsx",
+                                lineNumber: 221,
+                                columnNumber: 6
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "components/MacBookAir1/index.jsx",
+                        lineNumber: 206,
+                        columnNumber: 5
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "cards-row",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "feature-card-1",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardInfo2Default.default), {
+                                    ecografa: cardInfo22Props.ecografa,
+                                    diagnsticoDeImge: cardInfo22Props.diagnsticoDeImge,
+                                    iconProps: cardInfo22Props.iconProps
+                                }, void 0, false, {
+                                    fileName: "components/MacBookAir1/index.jsx",
+                                    lineNumber: 231,
+                                    columnNumber: 7
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "components/MacBookAir1/index.jsx",
+                                lineNumber: 230,
+                                columnNumber: 6
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "feature-card-1",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardInfo2Default.default), {
+                                    ecografa: cardInfo23Props.ecografa,
+                                    diagnsticoDeImge: cardInfo23Props.diagnsticoDeImge,
+                                    iconProps: cardInfo23Props.iconProps
+                                }, void 0, false, {
+                                    fileName: "components/MacBookAir1/index.jsx",
+                                    lineNumber: 239,
+                                    columnNumber: 7
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "components/MacBookAir1/index.jsx",
+                                lineNumber: 238,
+                                columnNumber: 6
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "feature-card-1",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardInfo2Default.default), {
+                                    ecografa: cardInfo24Props.ecografa,
+                                    diagnsticoDeImge: cardInfo24Props.diagnsticoDeImge,
+                                    iconProps: cardInfo24Props.iconProps
+                                }, void 0, false, {
+                                    fileName: "components/MacBookAir1/index.jsx",
+                                    lineNumber: 247,
+                                    columnNumber: 7
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "components/MacBookAir1/index.jsx",
+                                lineNumber: 246,
+                                columnNumber: 6
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "components/MacBookAir1/index.jsx",
+                        lineNumber: 229,
+                        columnNumber: 5
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "feature-card-5",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "card-info-2",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _iconDefault.default), {
+                                    src: iconProps.src
+                                }, void 0, false, {
+                                    fileName: "components/MacBookAir1/index.jsx",
+                                    lineNumber: 257,
+                                    columnNumber: 7
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "text-4",
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            className: "pet-shop-1 gothamrounded-bold-thunder-28px",
+                                            children: petShop
+                                        }, void 0, false, {
+                                            fileName: "components/MacBookAir1/index.jsx",
+                                            lineNumber: 259,
+                                            columnNumber: 8
+                                        }, this),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                            className: "alimentos-accesorio gothamrounded-book-normal-thunder-16px",
+                                            children: alimentosAccesorio
+                                        }, void 0, false, {
+                                            fileName: "components/MacBookAir1/index.jsx",
+                                            lineNumber: 262,
+                                            columnNumber: 8
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "components/MacBookAir1/index.jsx",
+                                    lineNumber: 258,
+                                    columnNumber: 7
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "components/MacBookAir1/index.jsx",
+                            lineNumber: 256,
+                            columnNumber: 6
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "components/MacBookAir1/index.jsx",
+                        lineNumber: 255,
+                        columnNumber: 5
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "components/MacBookAir1/index.jsx",
+                lineNumber: 199,
+                columnNumber: 4
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "team",
+                id: "veterinarios",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "veterinarian-photo-2",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "overlap-group5-1",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "photo-background-1"
+                                }, void 0, false, {
+                                    fileName: "components/MacBookAir1/index.jsx",
+                                    lineNumber: 273,
+                                    columnNumber: 7
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                    className: "veterinarian-photo-3",
+                                    src: veterinarianPhoto,
+                                    alt: "Veterinarian photo"
+                                }, void 0, false, {
+                                    fileName: "components/MacBookAir1/index.jsx",
+                                    lineNumber: 274,
+                                    columnNumber: 7
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _veterinarianCardDefault.default), {
+                                    screenShot20230417At20152: veterinarianCardProps.screenShot20230417At20152,
+                                    drGuadalupePoggio: veterinarianCardProps.drGuadalupePoggio,
+                                    veterinaria: veterinarianCardProps.veterinaria,
+                                    text2: veterinarianCardProps.text2,
+                                    star_37941581: veterinarianCardProps.star_37941581,
+                                    x1200Pacientes: veterinarianCardProps.x1200Pacientes,
+                                    universidadDeBuenosAires: veterinarianCardProps.universidadDeBuenosAires
+                                }, void 0, false, {
+                                    fileName: "components/MacBookAir1/index.jsx",
+                                    lineNumber: 279,
+                                    columnNumber: 7
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _patientsCardDefault.default), {
+                                    className: patientsCardProps.className
+                                }, void 0, false, {
+                                    fileName: "components/MacBookAir1/index.jsx",
+                                    lineNumber: 292,
+                                    columnNumber: 7
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "components/MacBookAir1/index.jsx",
+                            lineNumber: 272,
+                            columnNumber: 6
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "components/MacBookAir1/index.jsx",
+                        lineNumber: 271,
+                        columnNumber: 5
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "headline-subhead-4",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardsRowDefault.default), {}, void 0, false, {
+                            fileName: "components/MacBookAir1/index.jsx",
+                            lineNumber: 296,
+                            columnNumber: 6
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "components/MacBookAir1/index.jsx",
+                        lineNumber: 295,
+                        columnNumber: 5
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "components/MacBookAir1/index.jsx",
+                lineNumber: 270,
+                columnNumber: 4
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                id: "about"
+            }, void 0, false, {
+                fileName: "components/MacBookAir1/index.jsx",
+                lineNumber: 299,
+                columnNumber: 4
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _testimonialsDefault.default), {
+                realStoriesFromSatisfiedCustomers: testimonialsProps.realStoriesFromSatisfiedCustomers,
+                seeHowOurLanding: testimonialsProps.seeHowOurLanding,
+                testimonialCard1Props: testimonialsProps.testimonialCard1Props,
+                testimonialCard2Props: testimonialsProps.testimonialCard2Props
+            }, void 0, false, {
+                fileName: "components/MacBookAir1/index.jsx",
+                lineNumber: 300,
+                columnNumber: 4
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "contact-form-2",
+                id: "contacto",
+                ref: sectionToScrollRef,
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "contact-form-3",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "header-3",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "headline-subhead-5",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "comunicate-con-nosotros-1 display-m",
+                                        children: comunicateConNosotros
+                                    }, void 0, false, {
+                                        fileName: "components/MacBookAir1/index.jsx",
+                                        lineNumber: 312,
+                                        columnNumber: 8
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                        className: "tenes-alguna-duda-s-1 body-m",
+                                        children: tenesAlgunaDudaS
+                                    }, void 0, false, {
+                                        fileName: "components/MacBookAir1/index.jsx",
+                                        lineNumber: 315,
+                                        columnNumber: 8
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "components/MacBookAir1/index.jsx",
+                                lineNumber: 311,
+                                columnNumber: 7
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "components/MacBookAir1/index.jsx",
+                            lineNumber: 310,
+                            columnNumber: 6
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "header-4",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "contact-details-1",
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _contactDetailsDefault.default), {
+                                            phone1Props: contactDetailsProps.phone1Props,
+                                            phone2Props: contactDetailsProps.phone2Props
+                                        }, void 0, false, {
+                                            fileName: "components/MacBookAir1/index.jsx",
+                                            lineNumber: 320,
+                                            columnNumber: 8
+                                        }, this),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            className: "social-media-1",
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                    className: "connect-with-us display-xs",
+                                                    children: connectWithUs
+                                                }, void 0, false, {
+                                                    fileName: "components/MacBookAir1/index.jsx",
+                                                    lineNumber: 325,
+                                                    columnNumber: 9
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                    className: "social-links-1",
+                                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                                        href: "https://www.instagram.com/vethome.pilar/",
+                                                        target: "_blank",
+                                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                                            className: "social-icons-1",
+                                                            src: "/img/social-icons.svg",
+                                                            alt: "Social Icons"
+                                                        }, void 0, false, {
+                                                            fileName: "components/MacBookAir1/index.jsx",
+                                                            lineNumber: 333,
+                                                            columnNumber: 11
+                                                        }, this)
+                                                    }, void 0, false, {
+                                                        fileName: "components/MacBookAir1/index.jsx",
+                                                        lineNumber: 329,
+                                                        columnNumber: 10
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "components/MacBookAir1/index.jsx",
+                                                    lineNumber: 328,
+                                                    columnNumber: 9
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "components/MacBookAir1/index.jsx",
+                                            lineNumber: 324,
+                                            columnNumber: 8
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "components/MacBookAir1/index.jsx",
+                                    lineNumber: 319,
+                                    columnNumber: 7
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "input-fields-button",
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            className: "input-fields",
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _inputFieldDefault.default), {
+                                                    value: formData.name,
+                                                    onChange: handleChange,
+                                                    required: true,
+                                                    name: "name",
+                                                    inputType: inputField1Props.inputType,
+                                                    inputPlaceholder: "Nombre Completo",
+                                                    icon2Props: inputField1Props.icon2Props
+                                                }, void 0, false, {
+                                                    fileName: "components/MacBookAir1/index.jsx",
+                                                    lineNumber: 344,
+                                                    columnNumber: 9
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _inputFieldEmailDefault.default), {
+                                                    inputType: inputField2Props.inputType,
+                                                    inputPlaceholder: inputField2Props.inputPlaceholder,
+                                                    icon2Props: inputField2Props.icon2Props,
+                                                    name: "email",
+                                                    value: formData.email,
+                                                    onChange: handleChange,
+                                                    required: true
+                                                }, void 0, false, {
+                                                    fileName: "components/MacBookAir1/index.jsx",
+                                                    lineNumber: 353,
+                                                    columnNumber: 9
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _inputFieldPhoneDefault.default), {
+                                                    inputType: inputField3Props.inputType,
+                                                    inputPlaceholder: "Tel\xe9fono",
+                                                    icon2Props: inputField3Props.icon2Props,
+                                                    value: formData.phone,
+                                                    onChange: handleChange,
+                                                    name: "phone",
+                                                    required: true
+                                                }, void 0, false, {
+                                                    fileName: "components/MacBookAir1/index.jsx",
+                                                    lineNumber: 362,
+                                                    columnNumber: 9
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                    className: "input-field-4",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _iconMensajeDefault.default), {
+                                                            className: icon2Props.className
+                                                        }, void 0, false, {
+                                                            fileName: "components/MacBookAir1/index.jsx",
+                                                            lineNumber: 372,
+                                                            columnNumber: 10
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("textarea", {
+                                                            className: "mensaje-1 body-m",
+                                                            placeholder: "Mensaje",
+                                                            type: "text",
+                                                            required: true,
+                                                            name: "message",
+                                                            value: formData.message,
+                                                            onChange: handleChange
+                                                        }, void 0, false, {
+                                                            fileName: "components/MacBookAir1/index.jsx",
+                                                            lineNumber: 373,
+                                                            columnNumber: 10
+                                                        }, this)
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "components/MacBookAir1/index.jsx",
+                                                    lineNumber: 371,
+                                                    columnNumber: 9
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "components/MacBookAir1/index.jsx",
+                                            lineNumber: 343,
+                                            columnNumber: 8
+                                        }, this),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _button2Default.default), {
+                                            type: "submit"
+                                        }, void 0, false, {
+                                            fileName: "components/MacBookAir1/index.jsx",
+                                            lineNumber: 384,
+                                            columnNumber: 8
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "components/MacBookAir1/index.jsx",
+                                    lineNumber: 342,
+                                    columnNumber: 7
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "components/MacBookAir1/index.jsx",
+                            lineNumber: 318,
+                            columnNumber: 6
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "components/MacBookAir1/index.jsx",
+                    lineNumber: 309,
+                    columnNumber: 5
+                }, this)
+            }, void 0, false, {
+                fileName: "components/MacBookAir1/index.jsx",
+                lineNumber: 308,
+                columnNumber: 4
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerDefault.default), {
+                children: footerProps.children
+            }, void 0, false, {
+                fileName: "components/MacBookAir1/index.jsx",
+                lineNumber: 389,
+                columnNumber: 4
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "components/MacBookAir1/index.jsx",
+        lineNumber: 121,
+        columnNumber: 3
+    }, this);
+}
+_s(MacBookAir1, "oob3yaSNaIwr/zvVswH3siDQmeI=");
+_c = MacBookAir1;
+exports.default = MacBookAir1;
+var _c;
+$RefreshReg$(_c, "MacBookAir1");
+
+  $parcel$ReactRefreshHelpers$86bc.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../NavbarLinks":"c3ZXt","../Frame1":"2uxSD","../CardInfo2":"8GLi8","../Button":"cxMY5","../FeatureCard":"blGpq","../CardInfo4":"8VcqA","../Icon":"efBlU","../VeterinarianCard":"55Z9s","../PatientsCard":"2ORqZ","../CardsRow":"g4eW5","../Testimonials":"cJoZz","../ContactDetails":"bzZLP","../InputField":"jkhPM","../InputFieldEmail":"hfBxx","../InputFieldPhone":"4CepJ","../Icon2":"1MZoF","../IconMensaje":"c9xU3","../Button2":"f26VG","../Footer":"aMelp","./MacBookAir1.css":"5Swa7","../../dist/img/envelopesimple-1.svg":"dlXSw","emailjs-com":"18oDj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"c3ZXt":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$8a34 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$8a34.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _navbarLinksCss = require("./NavbarLinks.css");
+var _reactScroll = require("react-scroll");
+function NavbarLinks() {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "navbar-links",
+        id: "navbar",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "flex-row montserrat-semi-bold-white-20px",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactScroll.Link), {
+                    to: "navbar",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "place",
+                        children: "Home"
+                    }, void 0, false, {
+                        fileName: "components/NavbarLinks/index.jsx",
+                        lineNumber: 10,
+                        columnNumber: 6
+                    }, this)
+                }, void 0, false, {
+                    fileName: "components/NavbarLinks/index.jsx",
+                    lineNumber: 9,
+                    columnNumber: 5
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactScroll.Link), {
+                    to: "servicios",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "servicios",
+                        children: "Servicios"
+                    }, void 0, false, {
+                        fileName: "components/NavbarLinks/index.jsx",
+                        lineNumber: 13,
+                        columnNumber: 6
+                    }, this)
+                }, void 0, false, {
+                    fileName: "components/NavbarLinks/index.jsx",
+                    lineNumber: 12,
+                    columnNumber: 5
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactScroll.Link), {
+                    to: "veterinarios",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "veterinarios",
+                        children: "Veterinarios"
+                    }, void 0, false, {
+                        fileName: "components/NavbarLinks/index.jsx",
+                        lineNumber: 16,
+                        columnNumber: 6
+                    }, this)
+                }, void 0, false, {
+                    fileName: "components/NavbarLinks/index.jsx",
+                    lineNumber: 15,
+                    columnNumber: 5
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactScroll.Link), {
+                    to: "about",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "about",
+                        children: "About"
+                    }, void 0, false, {
+                        fileName: "components/NavbarLinks/index.jsx",
+                        lineNumber: 19,
+                        columnNumber: 6
+                    }, this)
+                }, void 0, false, {
+                    fileName: "components/NavbarLinks/index.jsx",
+                    lineNumber: 18,
+                    columnNumber: 5
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactScroll.Link), {
+                    to: "contacto",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "contacto",
+                        children: "Contacto"
+                    }, void 0, false, {
+                        fileName: "components/NavbarLinks/index.jsx",
+                        lineNumber: 22,
+                        columnNumber: 6
+                    }, this)
+                }, void 0, false, {
+                    fileName: "components/NavbarLinks/index.jsx",
+                    lineNumber: 21,
+                    columnNumber: 5
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "components/NavbarLinks/index.jsx",
+            lineNumber: 8,
+            columnNumber: 4
+        }, this)
+    }, void 0, false, {
+        fileName: "components/NavbarLinks/index.jsx",
+        lineNumber: 7,
+        columnNumber: 3
+    }, this);
+}
+_c = NavbarLinks;
+exports.default = NavbarLinks;
+var _c;
+$RefreshReg$(_c, "NavbarLinks");
+
+  $parcel$ReactRefreshHelpers$8a34.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./NavbarLinks.css":"gLI59","react-scroll":"2D4g1","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gLI59":[function() {},{}],"2uxSD":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$1ab9 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -35662,14 +35619,17 @@ var _s = $RefreshSig$();
 function Frame1(props) {
     _s();
     const { botonContactanosProps  } = props;
-    // Create a ref for the target section
     const sectionToScrollRef = (0, _react.useRef)(null);
     // Function to handle the smooth scroll
     const scrollToSection = ()=>{
-        sectionToScrollRef.current.scrollIntoView({
+        if (sectionToScrollRef.current) sectionToScrollRef.current.scrollIntoView({
             behavior: "smooth"
         });
     };
+    // Add an effect to scroll to the section when the component is mounted
+    (0, _react.useEffect)(()=>{
+        scrollToSection();
+    }, []);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "frame-1",
         children: [
@@ -35681,7 +35641,7 @@ function Frame1(props) {
                         children: "Cl\xednica Veterinaria"
                     }, void 0, false, {
                         fileName: "components/Frame1/index.jsx",
-                        lineNumber: 24,
+                        lineNumber: 31,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
@@ -35690,13 +35650,13 @@ function Frame1(props) {
                         alt: "Line 6"
                     }, void 0, false, {
                         fileName: "components/Frame1/index.jsx",
-                        lineNumber: 27,
+                        lineNumber: 34,
                         columnNumber: 5
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "components/Frame1/index.jsx",
-                lineNumber: 23,
+                lineNumber: 30,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35709,12 +35669,12 @@ function Frame1(props) {
                             children: "Tu familia es importante"
                         }, void 0, false, {
                             fileName: "components/Frame1/index.jsx",
-                            lineNumber: 31,
+                            lineNumber: 38,
                             columnNumber: 6
                         }, this)
                     }, void 0, false, {
                         fileName: "components/Frame1/index.jsx",
-                        lineNumber: 30,
+                        lineNumber: 37,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35724,18 +35684,18 @@ function Frame1(props) {
                             children: "para nosotros"
                         }, void 0, false, {
                             fileName: "components/Frame1/index.jsx",
-                            lineNumber: 36,
+                            lineNumber: 43,
                             columnNumber: 6
                         }, this)
                     }, void 0, false, {
                         fileName: "components/Frame1/index.jsx",
-                        lineNumber: 35,
+                        lineNumber: 42,
                         columnNumber: 5
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "components/Frame1/index.jsx",
-                lineNumber: 29,
+                lineNumber: 36,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -35743,7 +35703,7 @@ function Frame1(props) {
                 children: "Estamos 24 horas al d\xeda disponibles para la salud de tus mascotas."
             }, void 0, false, {
                 fileName: "components/Frame1/index.jsx",
-                lineNumber: 39,
+                lineNumber: 46,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactScroll.Link), {
@@ -35754,22 +35714,22 @@ function Frame1(props) {
                     children: botonContactanosProps.children
                 }, void 0, false, {
                     fileName: "components/Frame1/index.jsx",
-                    lineNumber: 43,
+                    lineNumber: 50,
                     columnNumber: 5
                 }, this)
             }, void 0, false, {
                 fileName: "components/Frame1/index.jsx",
-                lineNumber: 42,
+                lineNumber: 49,
                 columnNumber: 4
             }, this)
         ]
     }, void 0, true, {
         fileName: "components/Frame1/index.jsx",
-        lineNumber: 22,
+        lineNumber: 29,
         columnNumber: 3
     }, this);
 }
-_s(Frame1, "8kU0EA+XmUHyeqG9W3bPxWCv5f0=");
+_s(Frame1, "+XbzYliFYridRm20IWvwyNBlao8=");
 _c = Frame1;
 exports.default = Frame1;
 var _c;

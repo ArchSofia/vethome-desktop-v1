@@ -1,12 +1,22 @@
 import "./App.css";
 import React from "react";
+import React, { useEffect, useState } from "react";
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import LandingPageV1Mobile from "./components/LandingPageV1Mobile";
 import MacBookAir1 from "./components/MacBookAir1";
 
 function App() {
-	const isMobileScreen = window.innerWidth < 600; // Adjust the breakpoint to your desired width
-	console.log("Is Mobile Screen:", isMobileScreen);
+	const [isMobileScreen, setIsMobileScreen] = useState(window.innerWidth < 600);
+
+	useEffect(() => {
+		function handleResize() {
+			setIsMobileScreen(window.innerWidth < 600);
+		}
+
+		window.addEventListener("resize", handleResize);
+		return () => window.removeEventListener("resize", handleResize);
+	}, []);
+
 	return (
 		<Router>
 			<Switch>

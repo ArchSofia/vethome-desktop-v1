@@ -4,19 +4,26 @@ import "./Frame1.css";
 import { Link, animateScroll as scroll, scroller } from "react-scroll";
 import React, { useRef } from "react";
 import MacBookAir1 from "../MacBookAir1";
+import { useEffect } from "react";
 
 function Frame1(props) {
 	const { botonContactanosProps } = props;
 
-	// Create a ref for the target section
 	const sectionToScrollRef = useRef(null);
 
 	// Function to handle the smooth scroll
 	const scrollToSection = () => {
-		sectionToScrollRef.current.scrollIntoView({
-			behavior: "smooth",
-		});
+		if (sectionToScrollRef.current) {
+			sectionToScrollRef.current.scrollIntoView({
+				behavior: "smooth",
+			});
+		}
 	};
+
+	// Add an effect to scroll to the section when the component is mounted
+	useEffect(() => {
+		scrollToSection();
+	}, []);
 
 	return (
 		<div className="frame-1">
