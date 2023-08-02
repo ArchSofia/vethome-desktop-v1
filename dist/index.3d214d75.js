@@ -30702,7 +30702,7 @@ var _iconMensajeDefault = parcelHelpers.interopDefault(_iconMensaje);
 var _s = $RefreshSig$();
 function LandingPageV1Mobile(props) {
     _s();
-    const { clnicaVeterinaria , tuFamiliaEsImportanteParaNosotros , estamos24HorasAl , quServiciosOfrecemos , estamosAlServicio , unidadDeCuidadosIntensivos , imagenPorRayosXP , losMejoresMdicos , somosUnEquipoDeP , label , veterinarianPhoto , comunicateConNosotros , tenesAlgunaDudaS , conectateConNosotros , inputType1 , inputPlaceholder1 , inputType2 , inputPlaceholder2 , contactDetailsProps , navbarProps , botonProps , group9Props , cardInfo1Props , button1Props , cardInfo2Props , button2Props , iconProps , button3Props , cardInfo3Props , button4Props , cardInfo4Props , button5Props , cardInfo5Props , button6Props , cardInfo6Props , button7Props , arrowRight1Props , testimonials22Props , phone221Props , phone222Props , inputField1Props , inputField2Props , arrowRight2Props , icon2Props , footer22Props  } = props;
+    const { clnicaVeterinaria , tuFamiliaEsImportanteParaNosotros , estamos24HorasAl , quServiciosOfrecemos , estamosAlServicio , unidadDeCuidadosIntensivos , imagenPorRayosXP , losMejoresMdicos , somosUnEquipoDeP , label , veterinarianPhoto , comunicateConNosotros , tenesAlgunaDudaS , conectateConNosotros , inputType1 , inputPlaceholder1 , inputType2 , inputPlaceholder2 , contactDetailsProps , navbarProps , botonProps , group9Props , cardInfo1Props , button1Props , cardInfo2Props , button2Props , iconProps , button3Props , cardInfo3Props , button4Props , cardInfo4Props , button5Props , cardInfo5Props , button6Props , cardInfo6Props , button7Props , arrowRight1Props , testimonials22Props , phone221Props , phone222Props , inputField1Props , inputField2Props , arrowRight2Props , inputField3Props , icon2Props , footer22Props  } = props;
     const [formData, setFormData] = (0, _react.useState)({
         name: "",
         email: "",
@@ -30743,7 +30743,7 @@ function LandingPageV1Mobile(props) {
                         children: navbarProps.children
                     }, void 0, false, {
                         fileName: "components/LandingPageV1Mobile/index.jsx",
-                        lineNumber: 119,
+                        lineNumber: 120,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -30754,7 +30754,7 @@ function LandingPageV1Mobile(props) {
                                 children: clnicaVeterinaria
                             }, void 0, false, {
                                 fileName: "components/LandingPageV1Mobile/index.jsx",
-                                lineNumber: 121,
+                                lineNumber: 122,
                                 columnNumber: 6
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -30762,7 +30762,7 @@ function LandingPageV1Mobile(props) {
                                 children: tuFamiliaEsImportanteParaNosotros
                             }, void 0, false, {
                                 fileName: "components/LandingPageV1Mobile/index.jsx",
-                                lineNumber: 124,
+                                lineNumber: 125,
                                 columnNumber: 6
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -30770,7 +30770,7 @@ function LandingPageV1Mobile(props) {
                                 children: estamos24HorasAl
                             }, void 0, false, {
                                 fileName: "components/LandingPageV1Mobile/index.jsx",
-                                lineNumber: 127,
+                                lineNumber: 128,
                                 columnNumber: 6
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -30782,23 +30782,23 @@ function LandingPageV1Mobile(props) {
                                         children: botonProps.children
                                     }, void 0, false, {
                                         fileName: "components/LandingPageV1Mobile/index.jsx",
-                                        lineNumber: 132,
+                                        lineNumber: 133,
                                         columnNumber: 8
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "components/LandingPageV1Mobile/index.jsx",
-                                    lineNumber: 131,
+                                    lineNumber: 132,
                                     columnNumber: 7
                                 }, this)
                             }, void 0, false, {
                                 fileName: "components/LandingPageV1Mobile/index.jsx",
-                                lineNumber: 130,
+                                lineNumber: 131,
                                 columnNumber: 6
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "components/LandingPageV1Mobile/index.jsx",
-                        lineNumber: 120,
+                        lineNumber: 121,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -30807,18 +30807,18 @@ function LandingPageV1Mobile(props) {
                             ...group9Props
                         }, void 0, false, {
                             fileName: "components/LandingPageV1Mobile/index.jsx",
-                            lineNumber: 137,
+                            lineNumber: 138,
                             columnNumber: 6
                         }, this)
                     }, void 0, false, {
                         fileName: "components/LandingPageV1Mobile/index.jsx",
-                        lineNumber: 136,
+                        lineNumber: 137,
                         columnNumber: 5
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "components/LandingPageV1Mobile/index.jsx",
-                lineNumber: 118,
+                lineNumber: 119,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -30832,7 +30832,7 @@ function LandingPageV1Mobile(props) {
                                 children: quServiciosOfrecemos
                             }, void 0, false, {
                                 fileName: "components/LandingPageV1Mobile/index.jsx",
-                                lineNumber: 142,
+                                lineNumber: 143,
                                 columnNumber: 6
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -30840,13 +30840,13 @@ function LandingPageV1Mobile(props) {
                                 children: estamosAlServicio
                             }, void 0, false, {
                                 fileName: "components/LandingPageV1Mobile/index.jsx",
-                                lineNumber: 145,
+                                lineNumber: 146,
                                 columnNumber: 6
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "components/LandingPageV1Mobile/index.jsx",
-                        lineNumber: 141,
+                        lineNumber: 142,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -30856,12 +30856,12 @@ function LandingPageV1Mobile(props) {
                             iconProps: cardInfo1Props.iconProps
                         }, void 0, false, {
                             fileName: "components/LandingPageV1Mobile/index.jsx",
-                            lineNumber: 150,
+                            lineNumber: 151,
                             columnNumber: 6
                         }, this)
                     }, void 0, false, {
                         fileName: "components/LandingPageV1Mobile/index.jsx",
-                        lineNumber: 149,
+                        lineNumber: 150,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -30871,12 +30871,12 @@ function LandingPageV1Mobile(props) {
                             iconProps: cardInfo2Props.iconProps
                         }, void 0, false, {
                             fileName: "components/LandingPageV1Mobile/index.jsx",
-                            lineNumber: 157,
+                            lineNumber: 158,
                             columnNumber: 6
                         }, this)
                     }, void 0, false, {
                         fileName: "components/LandingPageV1Mobile/index.jsx",
-                        lineNumber: 156,
+                        lineNumber: 157,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -30888,7 +30888,7 @@ function LandingPageV1Mobile(props) {
                                     src: iconProps.src
                                 }, void 0, false, {
                                     fileName: "components/LandingPageV1Mobile/index.jsx",
-                                    lineNumber: 165,
+                                    lineNumber: 166,
                                     columnNumber: 7
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -30899,7 +30899,7 @@ function LandingPageV1Mobile(props) {
                                             children: unidadDeCuidadosIntensivos
                                         }, void 0, false, {
                                             fileName: "components/LandingPageV1Mobile/index.jsx",
-                                            lineNumber: 167,
+                                            lineNumber: 168,
                                             columnNumber: 8
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -30907,24 +30907,24 @@ function LandingPageV1Mobile(props) {
                                             children: imagenPorRayosXP
                                         }, void 0, false, {
                                             fileName: "components/LandingPageV1Mobile/index.jsx",
-                                            lineNumber: 170,
+                                            lineNumber: 171,
                                             columnNumber: 8
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "components/LandingPageV1Mobile/index.jsx",
-                                    lineNumber: 166,
+                                    lineNumber: 167,
                                     columnNumber: 7
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "components/LandingPageV1Mobile/index.jsx",
-                            lineNumber: 164,
+                            lineNumber: 165,
                             columnNumber: 6
                         }, this)
                     }, void 0, false, {
                         fileName: "components/LandingPageV1Mobile/index.jsx",
-                        lineNumber: 163,
+                        lineNumber: 164,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -30934,12 +30934,12 @@ function LandingPageV1Mobile(props) {
                             iconProps: cardInfo3Props.iconProps
                         }, void 0, false, {
                             fileName: "components/LandingPageV1Mobile/index.jsx",
-                            lineNumber: 178,
+                            lineNumber: 179,
                             columnNumber: 6
                         }, this)
                     }, void 0, false, {
                         fileName: "components/LandingPageV1Mobile/index.jsx",
-                        lineNumber: 177,
+                        lineNumber: 178,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -30949,12 +30949,12 @@ function LandingPageV1Mobile(props) {
                             iconProps: cardInfo4Props.iconProps
                         }, void 0, false, {
                             fileName: "components/LandingPageV1Mobile/index.jsx",
-                            lineNumber: 185,
+                            lineNumber: 186,
                             columnNumber: 6
                         }, this)
                     }, void 0, false, {
                         fileName: "components/LandingPageV1Mobile/index.jsx",
-                        lineNumber: 184,
+                        lineNumber: 185,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -30964,12 +30964,12 @@ function LandingPageV1Mobile(props) {
                             iconProps: cardInfo5Props.iconProps
                         }, void 0, false, {
                             fileName: "components/LandingPageV1Mobile/index.jsx",
-                            lineNumber: 192,
+                            lineNumber: 193,
                             columnNumber: 6
                         }, this)
                     }, void 0, false, {
                         fileName: "components/LandingPageV1Mobile/index.jsx",
-                        lineNumber: 191,
+                        lineNumber: 192,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -30979,18 +30979,18 @@ function LandingPageV1Mobile(props) {
                             iconProps: cardInfo6Props.iconProps
                         }, void 0, false, {
                             fileName: "components/LandingPageV1Mobile/index.jsx",
-                            lineNumber: 199,
+                            lineNumber: 200,
                             columnNumber: 6
                         }, this)
                     }, void 0, false, {
                         fileName: "components/LandingPageV1Mobile/index.jsx",
-                        lineNumber: 198,
+                        lineNumber: 199,
                         columnNumber: 5
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "components/LandingPageV1Mobile/index.jsx",
-                lineNumber: 140,
+                lineNumber: 141,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -31007,7 +31007,7 @@ function LandingPageV1Mobile(props) {
                                         children: losMejoresMdicos
                                     }, void 0, false, {
                                         fileName: "components/LandingPageV1Mobile/index.jsx",
-                                        lineNumber: 209,
+                                        lineNumber: 210,
                                         columnNumber: 7
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -31015,26 +31015,26 @@ function LandingPageV1Mobile(props) {
                                         children: somosUnEquipoDeP
                                     }, void 0, false, {
                                         fileName: "components/LandingPageV1Mobile/index.jsx",
-                                        lineNumber: 210,
+                                        lineNumber: 211,
                                         columnNumber: 7
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "components/LandingPageV1Mobile/index.jsx",
-                                lineNumber: 208,
+                                lineNumber: 209,
                                 columnNumber: 6
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                 className: "ct-as"
                             }, void 0, false, {
                                 fileName: "components/LandingPageV1Mobile/index.jsx",
-                                lineNumber: 214,
+                                lineNumber: 215,
                                 columnNumber: 6
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "components/LandingPageV1Mobile/index.jsx",
-                        lineNumber: 207,
+                        lineNumber: 208,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -31046,7 +31046,7 @@ function LandingPageV1Mobile(props) {
                                     className: "photo-background"
                                 }, void 0, false, {
                                     fileName: "components/LandingPageV1Mobile/index.jsx",
-                                    lineNumber: 230,
+                                    lineNumber: 231,
                                     columnNumber: 7
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
@@ -31055,29 +31055,29 @@ function LandingPageV1Mobile(props) {
                                     alt: "Veterinarian photo"
                                 }, void 0, false, {
                                     fileName: "components/LandingPageV1Mobile/index.jsx",
-                                    lineNumber: 231,
+                                    lineNumber: 232,
                                     columnNumber: 7
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _patientsCardDefault.default), {}, void 0, false, {
                                     fileName: "components/LandingPageV1Mobile/index.jsx",
-                                    lineNumber: 236,
+                                    lineNumber: 237,
                                     columnNumber: 7
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "components/LandingPageV1Mobile/index.jsx",
-                            lineNumber: 229,
+                            lineNumber: 230,
                             columnNumber: 6
                         }, this)
                     }, void 0, false, {
                         fileName: "components/LandingPageV1Mobile/index.jsx",
-                        lineNumber: 228,
+                        lineNumber: 229,
                         columnNumber: 5
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "components/LandingPageV1Mobile/index.jsx",
-                lineNumber: 206,
+                lineNumber: 207,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _testimonials22Default.default), {
@@ -31087,7 +31087,7 @@ function LandingPageV1Mobile(props) {
                 testimonialCard22Props: testimonials22Props.testimonialCard22Props
             }, void 0, false, {
                 fileName: "components/LandingPageV1Mobile/index.jsx",
-                lineNumber: 240,
+                lineNumber: 241,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -31110,7 +31110,7 @@ function LandingPageV1Mobile(props) {
                                                     children: comunicateConNosotros
                                                 }, void 0, false, {
                                                     fileName: "components/LandingPageV1Mobile/index.jsx",
-                                                    lineNumber: 253,
+                                                    lineNumber: 254,
                                                     columnNumber: 9
                                                 }, this),
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -31118,13 +31118,13 @@ function LandingPageV1Mobile(props) {
                                                     children: tenesAlgunaDudaS
                                                 }, void 0, false, {
                                                     fileName: "components/LandingPageV1Mobile/index.jsx",
-                                                    lineNumber: 256,
+                                                    lineNumber: 257,
                                                     columnNumber: 9
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "components/LandingPageV1Mobile/index.jsx",
-                                            lineNumber: 252,
+                                            lineNumber: 253,
                                             columnNumber: 8
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -31141,7 +31141,7 @@ function LandingPageV1Mobile(props) {
                                                                 alt: "PhoneCall"
                                                             }, void 0, false, {
                                                                 fileName: "components/LandingPageV1Mobile/index.jsx",
-                                                                lineNumber: 261,
+                                                                lineNumber: 262,
                                                                 columnNumber: 11
                                                             }, this),
                                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -31149,37 +31149,37 @@ function LandingPageV1Mobile(props) {
                                                                 children: "info@vethome.com.ar"
                                                             }, void 0, false, {
                                                                 fileName: "components/LandingPageV1Mobile/index.jsx",
-                                                                lineNumber: 266,
+                                                                lineNumber: 267,
                                                                 columnNumber: 11
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "components/LandingPageV1Mobile/index.jsx",
-                                                        lineNumber: 260,
+                                                        lineNumber: 261,
                                                         columnNumber: 10
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "components/LandingPageV1Mobile/index.jsx",
-                                                    lineNumber: 259,
+                                                    lineNumber: 260,
                                                     columnNumber: 9
                                                 }, this),
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phone22Default.default), {
                                                     text5: phone221Props.text5
                                                 }, void 0, false, {
                                                     fileName: "components/LandingPageV1Mobile/index.jsx",
-                                                    lineNumber: 271,
+                                                    lineNumber: 272,
                                                     columnNumber: 9
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "components/LandingPageV1Mobile/index.jsx",
-                                            lineNumber: 258,
+                                            lineNumber: 259,
                                             columnNumber: 8
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "components/LandingPageV1Mobile/index.jsx",
-                                    lineNumber: 251,
+                                    lineNumber: 252,
                                     columnNumber: 7
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -31190,7 +31190,7 @@ function LandingPageV1Mobile(props) {
                                             children: conectateConNosotros
                                         }, void 0, false, {
                                             fileName: "components/LandingPageV1Mobile/index.jsx",
-                                            lineNumber: 276,
+                                            lineNumber: 277,
                                             columnNumber: 8
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -31204,168 +31204,195 @@ function LandingPageV1Mobile(props) {
                                                     alt: "Social Icons"
                                                 }, void 0, false, {
                                                     fileName: "components/LandingPageV1Mobile/index.jsx",
-                                                    lineNumber: 284,
+                                                    lineNumber: 285,
                                                     columnNumber: 10
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "components/LandingPageV1Mobile/index.jsx",
-                                                lineNumber: 280,
+                                                lineNumber: 281,
                                                 columnNumber: 9
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "components/LandingPageV1Mobile/index.jsx",
-                                            lineNumber: 279,
+                                            lineNumber: 280,
                                             columnNumber: 8
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "components/LandingPageV1Mobile/index.jsx",
-                                    lineNumber: 275,
+                                    lineNumber: 276,
                                     columnNumber: 7
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "components/LandingPageV1Mobile/index.jsx",
-                            lineNumber: 250,
+                            lineNumber: 251,
                             columnNumber: 6
                         }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "typeforms-ct-as",
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "typeforms",
-                                    children: [
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _inputFieldDefault.default), {
-                                            inputType: inputField1Props.inputType,
-                                            inputPlaceholder: "Nombre completo",
-                                            icon2Props: inputField1Props.icon2Props
-                                        }, void 0, false, {
-                                            fileName: "components/LandingPageV1Mobile/index.jsx",
-                                            lineNumber: 295,
-                                            columnNumber: 8
-                                        }, this),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _inputFieldEmailDefault.default), {
-                                            inputType: inputField2Props.inputType,
-                                            inputPlaceholder: inputField2Props.inputPlaceholder,
-                                            icon2Props: inputField2Props.icon2Props,
-                                            name: "email",
-                                            value: formData.email,
-                                            onChange: handleChange,
-                                            required: true
-                                        }, void 0, false, {
-                                            fileName: "components/LandingPageV1Mobile/index.jsx",
-                                            lineNumber: 300,
-                                            columnNumber: 8
-                                        }, this),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                            className: "input-field",
-                                            children: [
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                                    className: "icon",
-                                                    children: [
-                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _arrowRightDefault.default), {
-                                                            className: arrowRight2Props.className
-                                                        }, void 0, false, {
-                                                            fileName: "components/LandingPageV1Mobile/index.jsx",
-                                                            lineNumber: 311,
-                                                            columnNumber: 10
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                                            className: "divider"
-                                                        }, void 0, false, {
-                                                            fileName: "components/LandingPageV1Mobile/index.jsx",
-                                                            lineNumber: 312,
-                                                            columnNumber: 10
-                                                        }, this)
-                                                    ]
-                                                }, void 0, true, {
-                                                    fileName: "components/LandingPageV1Mobile/index.jsx",
-                                                    lineNumber: 310,
-                                                    columnNumber: 9
-                                                }, this),
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                                    className: "telfono body-m",
-                                                    name: "tel\xe9fono",
-                                                    placeholder: "Tel\xe9fono",
-                                                    type: inputType1,
-                                                    required: true
-                                                }, void 0, false, {
-                                                    fileName: "components/LandingPageV1Mobile/index.jsx",
-                                                    lineNumber: 314,
-                                                    columnNumber: 9
-                                                }, this)
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "components/LandingPageV1Mobile/index.jsx",
-                                            lineNumber: 309,
-                                            columnNumber: 8
-                                        }, this),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                            className: "input-field-1",
-                                            children: [
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _iconMensajeDefault.default), {
-                                                    className: icon2Props.className
-                                                }, void 0, false, {
-                                                    fileName: "components/LandingPageV1Mobile/index.jsx",
-                                                    lineNumber: 323,
-                                                    columnNumber: 9
-                                                }, this),
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                                    className: "mensaje body-m",
-                                                    name: "mensaje",
-                                                    placeholder: "Mensaje",
-                                                    type: inputType2,
-                                                    required: true
-                                                }, void 0, false, {
-                                                    fileName: "components/LandingPageV1Mobile/index.jsx",
-                                                    lineNumber: 325,
-                                                    columnNumber: 9
-                                                }, this)
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "components/LandingPageV1Mobile/index.jsx",
-                                            lineNumber: 322,
-                                            columnNumber: 8
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "components/LandingPageV1Mobile/index.jsx",
-                                    lineNumber: 294,
-                                    columnNumber: 7
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _button2Default.default), {}, void 0, false, {
-                                    fileName: "components/LandingPageV1Mobile/index.jsx",
-                                    lineNumber: 334,
-                                    columnNumber: 7
-                                }, this)
-                            ]
-                        }, void 0, true, {
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
+                            className: "macbook-air-1 screen",
+                            name: "form1",
+                            action: "form1",
+                            method: "post",
+                            onSubmit: handleSubmit,
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "typeforms-ct-as",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "typeforms",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _inputFieldDefault.default), {
+                                                value: formData.name,
+                                                onChange: handleChange,
+                                                required: true,
+                                                name: "name",
+                                                inputType: inputField1Props.inputType,
+                                                inputPlaceholder: "Nombre Completo",
+                                                icon2Props: inputField1Props.icon2Props
+                                            }, void 0, false, {
+                                                fileName: "components/LandingPageV1Mobile/index.jsx",
+                                                lineNumber: 303,
+                                                columnNumber: 9
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _inputFieldEmailDefault.default), {
+                                                inputType: inputField2Props.inputType,
+                                                inputPlaceholder: inputField2Props.inputPlaceholder,
+                                                icon2Props: inputField2Props.icon2Props,
+                                                name: "email",
+                                                value: formData.email,
+                                                onChange: handleChange,
+                                                required: true
+                                            }, void 0, false, {
+                                                fileName: "components/LandingPageV1Mobile/index.jsx",
+                                                lineNumber: 312,
+                                                columnNumber: 9
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                className: "input-field",
+                                                children: [
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                        className: "icon",
+                                                        children: [
+                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _arrowRightDefault.default), {
+                                                                className: arrowRight2Props.className
+                                                            }, void 0, false, {
+                                                                fileName: "components/LandingPageV1Mobile/index.jsx",
+                                                                lineNumber: 323,
+                                                                columnNumber: 11
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                                className: "divider"
+                                                            }, void 0, false, {
+                                                                fileName: "components/LandingPageV1Mobile/index.jsx",
+                                                                lineNumber: 324,
+                                                                columnNumber: 11
+                                                            }, this)
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "components/LandingPageV1Mobile/index.jsx",
+                                                        lineNumber: 322,
+                                                        columnNumber: 10
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                                        className: "telfono body-m",
+                                                        // name="phone"
+                                                        // placeholder="Teléfono"
+                                                        // type={inputType1}
+                                                        // required
+                                                        // inputType={"phone"}
+                                                        // inputPlaceholder={"Teléfono"}
+                                                        // icon2Props={inputField3Props.icon2Props}
+                                                        // value={formData.phone}
+                                                        // onChange={handleChange}
+                                                        inputType: "phone",
+                                                        inputPlaceholder: "Tel\xe9fono",
+                                                        // icon2Props={inputField3Props.icon2Props}
+                                                        value: formData.phone,
+                                                        onChange: handleChange,
+                                                        name: "phone",
+                                                        required: true
+                                                    }, void 0, false, {
+                                                        fileName: "components/LandingPageV1Mobile/index.jsx",
+                                                        lineNumber: 326,
+                                                        columnNumber: 10
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "components/LandingPageV1Mobile/index.jsx",
+                                                lineNumber: 321,
+                                                columnNumber: 9
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                className: "input-field-1",
+                                                children: [
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _iconMensajeDefault.default), {
+                                                        className: icon2Props.className
+                                                    }, void 0, false, {
+                                                        fileName: "components/LandingPageV1Mobile/index.jsx",
+                                                        lineNumber: 347,
+                                                        columnNumber: 10
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                                        className: "mensaje body-m",
+                                                        name: "mensaje",
+                                                        placeholder: "Mensaje",
+                                                        type: inputType2,
+                                                        required: true
+                                                    }, void 0, false, {
+                                                        fileName: "components/LandingPageV1Mobile/index.jsx",
+                                                        lineNumber: 349,
+                                                        columnNumber: 10
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "components/LandingPageV1Mobile/index.jsx",
+                                                lineNumber: 346,
+                                                columnNumber: 9
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "components/LandingPageV1Mobile/index.jsx",
+                                        lineNumber: 302,
+                                        columnNumber: 8
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _button2Default.default), {}, void 0, false, {
+                                        fileName: "components/LandingPageV1Mobile/index.jsx",
+                                        lineNumber: 358,
+                                        columnNumber: 8
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "components/LandingPageV1Mobile/index.jsx",
+                                lineNumber: 301,
+                                columnNumber: 7
+                            }, this)
+                        }, void 0, false, {
                             fileName: "components/LandingPageV1Mobile/index.jsx",
-                            lineNumber: 293,
+                            lineNumber: 294,
                             columnNumber: 6
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "components/LandingPageV1Mobile/index.jsx",
-                    lineNumber: 249,
+                    lineNumber: 250,
                     columnNumber: 5
                 }, this)
             }, void 0, false, {
                 fileName: "components/LandingPageV1Mobile/index.jsx",
-                lineNumber: 248,
+                lineNumber: 249,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footer22Default.default), {
                 children: footer22Props.children
             }, void 0, false, {
                 fileName: "components/LandingPageV1Mobile/index.jsx",
-                lineNumber: 338,
+                lineNumber: 363,
                 columnNumber: 4
             }, this)
         ]
     }, void 0, true, {
         fileName: "components/LandingPageV1Mobile/index.jsx",
-        lineNumber: 117,
+        lineNumber: 118,
         columnNumber: 3
     }, this);
 }
@@ -34831,42 +34858,33 @@ var _icon2Default = parcelHelpers.interopDefault(_icon2);
 var _inputFieldCss = require("./InputField.css");
 var _iconPhone = require("../IconPhone");
 var _iconPhoneDefault = parcelHelpers.interopDefault(_iconPhone);
-function InputField(props) {
+function InputFieldPhone(props) {
     const { inputType , inputPlaceholder , icon2Props , value , onChange , name  } = props;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "input-field-2",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _iconPhoneDefault.default), {
-                className: icon2Props.className
-            }, void 0, false, {
-                fileName: "components/InputFieldPhone/index.jsx",
-                lineNumber: 12,
-                columnNumber: 4
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                className: "full-name body-m",
-                placeholder: inputPlaceholder,
-                type: inputType,
-                value: value,
-                onChange: onChange,
-                name: name,
-                required: true
-            }, void 0, false, {
-                fileName: "components/InputFieldPhone/index.jsx",
-                lineNumber: 13,
-                columnNumber: 4
-            }, this)
-        ]
-    }, void 0, true, {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+            className: "full-name body-m",
+            placeholder: inputPlaceholder,
+            type: inputType,
+            value: value,
+            onChange: onChange,
+            name: name,
+            required: true
+        }, void 0, false, {
+            fileName: "components/InputFieldPhone/index.jsx",
+            lineNumber: 13,
+            columnNumber: 4
+        }, this)
+    }, void 0, false, {
         fileName: "components/InputFieldPhone/index.jsx",
         lineNumber: 11,
         columnNumber: 3
     }, this);
 }
-_c = InputField;
-exports.default = InputField;
+_c = InputFieldPhone;
+exports.default = InputFieldPhone;
 var _c;
-$RefreshReg$(_c, "InputField");
+$RefreshReg$(_c, "InputFieldPhone");
 
   $parcel$ReactRefreshHelpers$645b.postlude(module);
 } finally {

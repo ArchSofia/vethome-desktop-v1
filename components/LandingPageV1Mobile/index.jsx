@@ -66,6 +66,7 @@ function LandingPageV1Mobile(props) {
 		inputField1Props,
 		inputField2Props,
 		arrowRight2Props,
+		inputField3Props,
 		icon2Props,
 		footer22Props,
 	} = props;
@@ -290,49 +291,73 @@ function LandingPageV1Mobile(props) {
 							</div>
 						</div>
 					</div>
-					<div className="typeforms-ct-as">
-						<div className="typeforms">
-							<InputField
-								inputType={inputField1Props.inputType}
-								inputPlaceholder="Nombre completo"
-								icon2Props={inputField1Props.icon2Props}
-							/>
-							<InputFieldEmail
-								inputType={inputField2Props.inputType}
-								inputPlaceholder={inputField2Props.inputPlaceholder}
-								icon2Props={inputField2Props.icon2Props}
-								name="email"
-								value={formData.email}
-								onChange={handleChange}
-								required
-							/>
-							<div className="input-field">
-								<div className="icon">
-									<ArrowRight className={arrowRight2Props.className} />
-									<div className="divider"></div>
+					<form
+						className="macbook-air-1 screen"
+						name="form1"
+						action="form1"
+						method="post"
+						onSubmit={handleSubmit}
+					>
+						<div className="typeforms-ct-as">
+							<div className="typeforms">
+								<InputField
+									value={formData.name}
+									onChange={handleChange}
+									required
+									name="name"
+									inputType={inputField1Props.inputType}
+									inputPlaceholder={"Nombre Completo"}
+									icon2Props={inputField1Props.icon2Props}
+								/>
+								<InputFieldEmail
+									inputType={inputField2Props.inputType}
+									inputPlaceholder={inputField2Props.inputPlaceholder}
+									icon2Props={inputField2Props.icon2Props}
+									name="email"
+									value={formData.email}
+									onChange={handleChange}
+									required
+								/>
+								<div className="input-field">
+									<div className="icon">
+										<ArrowRight className={arrowRight2Props.className} />
+										<div className="divider"></div>
+									</div>
+									<input
+										className="telfono body-m"
+										// name="phone"
+										// placeholder="Teléfono"
+										// type={inputType1}
+										// required
+										// inputType={"phone"}
+										// inputPlaceholder={"Teléfono"}
+										// icon2Props={inputField3Props.icon2Props}
+										// value={formData.phone}
+										// onChange={handleChange}
+										inputType={"phone"}
+										inputPlaceholder={"Teléfono"}
+										// icon2Props={inputField3Props.icon2Props}
+										value={formData.phone}
+										onChange={handleChange}
+										name="phone"
+										required
+									/>
 								</div>
-								<input
-									className="telfono body-m"
-									name="teléfono"
-									placeholder="Teléfono"
-									type={inputType1}
-									required
-								/>
-							</div>
-							<div className="input-field-1">
-								<IconMensaje className={icon2Props.className} />
+								<div className="input-field-1">
+									<IconMensaje className={icon2Props.className} />
 
-								<input
-									className="mensaje body-m"
-									name="mensaje"
-									placeholder="Mensaje"
-									type={inputType2}
-									required
-								/>
+									<input
+										className="mensaje body-m"
+										name="mensaje"
+										placeholder="Mensaje"
+										type={inputType2}
+										required
+									/>
+								</div>
 							</div>
+							<Button2 />
 						</div>
-						<Button2 />
-					</div>
+					</form>
 				</div>
 			</div>
 			<Footer22>{footer22Props.children}</Footer22>
