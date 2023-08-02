@@ -805,79 +805,6 @@ input:focus {
   position: relative;
 }
 
-.icon-3-1 {
-  flex: none;
-  align-items: center;
-  gap: 8px;
-  display: inline-flex;
-  position: relative;
-}
-
-.send {
-  width: 19px;
-  height: 19px;
-  position: relative;
-}
-
-.divider-1 {
-  background-color: var(--hawkes-blue);
-  width: 1px;
-  height: 20px;
-  position: relative;
-}
-
-.icon-3-1 {
-  flex: none;
-  align-items: center;
-  gap: 8px;
-  display: inline-flex;
-  position: relative;
-}
-
-.user-1 {
-  width: 20px;
-  height: 20px;
-  position: relative;
-}
-
-.divider-1 {
-  background-color: var(--hawkes-blue);
-  width: 1px;
-  height: 20px;
-  position: relative;
-}
-
-.input-field-2, .input-field-3 {
-  background-color: var(--white);
-  border: 1px solid;
-  border-color: var(--deviders---grey-);
-  border-radius: 20px;
-  align-self: stretch;
-  align-items: center;
-  gap: 12px;
-  width: 100%;
-  height: 60px;
-  padding: 8px 20px;
-  display: flex;
-  position: relative;
-}
-
-.full-name, .email, .full-name-1, .email-1, .telfono-1 {
-  color: var(--onboarding-background-grey);
-  white-space: nowrap;
-  background-color: #0000;
-  border: 0;
-  flex: 1;
-  padding: 0;
-  font-weight: 400;
-  line-height: 24px;
-  position: relative;
-}
-
-.full-name::placeholder, .email::placeholder, .full-name-1::placeholder, .email-1::placeholder, .telfono-1::placeholder {
-  color: #2d2d2d99;
-}
-
 .testimonials-1 {
   background-color: var(--neutral---zircon);
   flex-direction: column;
@@ -1431,6 +1358,79 @@ input:focus {
   margin-left: 15px;
   line-height: 37px;
   transition: all .2s;
+}
+
+.icon-3-1 {
+  flex: none;
+  align-items: center;
+  gap: 8px;
+  display: inline-flex;
+  position: relative;
+}
+
+.send {
+  width: 19px;
+  height: 19px;
+  position: relative;
+}
+
+.divider-1 {
+  background-color: var(--hawkes-blue);
+  width: 1px;
+  height: 20px;
+  position: relative;
+}
+
+.icon-3-1 {
+  flex: none;
+  align-items: center;
+  gap: 8px;
+  display: inline-flex;
+  position: relative;
+}
+
+.user-1 {
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+
+.divider-1 {
+  background-color: var(--hawkes-blue);
+  width: 1px;
+  height: 20px;
+  position: relative;
+}
+
+.input-field-2, .input-field-3 {
+  background-color: var(--white);
+  border: 1px solid;
+  border-color: var(--deviders---grey-);
+  border-radius: 20px;
+  align-self: stretch;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  height: 60px;
+  padding: 8px 20px;
+  display: flex;
+  position: relative;
+}
+
+.full-name, .email, .full-name-1, .email-1, .telfono-1 {
+  color: var(--onboarding-background-grey);
+  white-space: nowrap;
+  background-color: #0000;
+  border: 0;
+  flex: 1;
+  padding: 0;
+  font-weight: 400;
+  line-height: 24px;
+  position: relative;
+}
+
+.full-name::placeholder, .email::placeholder, .full-name-1::placeholder, .email-1::placeholder, .telfono-1::placeholder {
+  color: #2d2d2d99;
 }
 
 .input-field-2, .input-field-3 {

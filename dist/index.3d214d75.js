@@ -30695,6 +30695,10 @@ var _landingPageV1MobileCss = require("./LandingPageV1Mobile.css");
 var _reactScroll = require("react-scroll");
 var _inputFieldEmail = require("../InputFieldEmail");
 var _inputFieldEmailDefault = parcelHelpers.interopDefault(_inputFieldEmail);
+var _inputFieldPhone = require("../InputFieldPhone");
+var _inputFieldPhoneDefault = parcelHelpers.interopDefault(_inputFieldPhone);
+var _iconMensaje = require("../IconMensaje");
+var _iconMensajeDefault = parcelHelpers.interopDefault(_iconMensaje);
 var _s = $RefreshSig$();
 function LandingPageV1Mobile(props) {
     _s();
@@ -30739,7 +30743,7 @@ function LandingPageV1Mobile(props) {
                         children: navbarProps.children
                     }, void 0, false, {
                         fileName: "components/LandingPageV1Mobile/index.jsx",
-                        lineNumber: 117,
+                        lineNumber: 119,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -30750,7 +30754,7 @@ function LandingPageV1Mobile(props) {
                                 children: clnicaVeterinaria
                             }, void 0, false, {
                                 fileName: "components/LandingPageV1Mobile/index.jsx",
-                                lineNumber: 119,
+                                lineNumber: 121,
                                 columnNumber: 6
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -30758,7 +30762,7 @@ function LandingPageV1Mobile(props) {
                                 children: tuFamiliaEsImportanteParaNosotros
                             }, void 0, false, {
                                 fileName: "components/LandingPageV1Mobile/index.jsx",
-                                lineNumber: 122,
+                                lineNumber: 124,
                                 columnNumber: 6
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -30766,7 +30770,7 @@ function LandingPageV1Mobile(props) {
                                 children: estamos24HorasAl
                             }, void 0, false, {
                                 fileName: "components/LandingPageV1Mobile/index.jsx",
-                                lineNumber: 125,
+                                lineNumber: 127,
                                 columnNumber: 6
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -30778,23 +30782,23 @@ function LandingPageV1Mobile(props) {
                                         children: botonProps.children
                                     }, void 0, false, {
                                         fileName: "components/LandingPageV1Mobile/index.jsx",
-                                        lineNumber: 130,
+                                        lineNumber: 132,
                                         columnNumber: 8
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "components/LandingPageV1Mobile/index.jsx",
-                                    lineNumber: 129,
+                                    lineNumber: 131,
                                     columnNumber: 7
                                 }, this)
                             }, void 0, false, {
                                 fileName: "components/LandingPageV1Mobile/index.jsx",
-                                lineNumber: 128,
+                                lineNumber: 130,
                                 columnNumber: 6
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "components/LandingPageV1Mobile/index.jsx",
-                        lineNumber: 118,
+                        lineNumber: 120,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -30803,18 +30807,18 @@ function LandingPageV1Mobile(props) {
                             ...group9Props
                         }, void 0, false, {
                             fileName: "components/LandingPageV1Mobile/index.jsx",
-                            lineNumber: 135,
+                            lineNumber: 137,
                             columnNumber: 6
                         }, this)
                     }, void 0, false, {
                         fileName: "components/LandingPageV1Mobile/index.jsx",
-                        lineNumber: 134,
+                        lineNumber: 136,
                         columnNumber: 5
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "components/LandingPageV1Mobile/index.jsx",
-                lineNumber: 116,
+                lineNumber: 118,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -30828,7 +30832,7 @@ function LandingPageV1Mobile(props) {
                                 children: quServiciosOfrecemos
                             }, void 0, false, {
                                 fileName: "components/LandingPageV1Mobile/index.jsx",
-                                lineNumber: 140,
+                                lineNumber: 142,
                                 columnNumber: 6
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -30836,13 +30840,13 @@ function LandingPageV1Mobile(props) {
                                 children: estamosAlServicio
                             }, void 0, false, {
                                 fileName: "components/LandingPageV1Mobile/index.jsx",
-                                lineNumber: 143,
+                                lineNumber: 145,
                                 columnNumber: 6
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "components/LandingPageV1Mobile/index.jsx",
-                        lineNumber: 139,
+                        lineNumber: 141,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -30852,12 +30856,12 @@ function LandingPageV1Mobile(props) {
                             iconProps: cardInfo1Props.iconProps
                         }, void 0, false, {
                             fileName: "components/LandingPageV1Mobile/index.jsx",
-                            lineNumber: 148,
+                            lineNumber: 150,
                             columnNumber: 6
                         }, this)
                     }, void 0, false, {
                         fileName: "components/LandingPageV1Mobile/index.jsx",
-                        lineNumber: 147,
+                        lineNumber: 149,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -30867,12 +30871,12 @@ function LandingPageV1Mobile(props) {
                             iconProps: cardInfo2Props.iconProps
                         }, void 0, false, {
                             fileName: "components/LandingPageV1Mobile/index.jsx",
-                            lineNumber: 155,
+                            lineNumber: 157,
                             columnNumber: 6
                         }, this)
                     }, void 0, false, {
                         fileName: "components/LandingPageV1Mobile/index.jsx",
-                        lineNumber: 154,
+                        lineNumber: 156,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -30884,7 +30888,7 @@ function LandingPageV1Mobile(props) {
                                     src: iconProps.src
                                 }, void 0, false, {
                                     fileName: "components/LandingPageV1Mobile/index.jsx",
-                                    lineNumber: 163,
+                                    lineNumber: 165,
                                     columnNumber: 7
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -30895,7 +30899,7 @@ function LandingPageV1Mobile(props) {
                                             children: unidadDeCuidadosIntensivos
                                         }, void 0, false, {
                                             fileName: "components/LandingPageV1Mobile/index.jsx",
-                                            lineNumber: 165,
+                                            lineNumber: 167,
                                             columnNumber: 8
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -30903,24 +30907,24 @@ function LandingPageV1Mobile(props) {
                                             children: imagenPorRayosXP
                                         }, void 0, false, {
                                             fileName: "components/LandingPageV1Mobile/index.jsx",
-                                            lineNumber: 168,
+                                            lineNumber: 170,
                                             columnNumber: 8
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "components/LandingPageV1Mobile/index.jsx",
-                                    lineNumber: 164,
+                                    lineNumber: 166,
                                     columnNumber: 7
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "components/LandingPageV1Mobile/index.jsx",
-                            lineNumber: 162,
+                            lineNumber: 164,
                             columnNumber: 6
                         }, this)
                     }, void 0, false, {
                         fileName: "components/LandingPageV1Mobile/index.jsx",
-                        lineNumber: 161,
+                        lineNumber: 163,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -30930,12 +30934,12 @@ function LandingPageV1Mobile(props) {
                             iconProps: cardInfo3Props.iconProps
                         }, void 0, false, {
                             fileName: "components/LandingPageV1Mobile/index.jsx",
-                            lineNumber: 176,
+                            lineNumber: 178,
                             columnNumber: 6
                         }, this)
                     }, void 0, false, {
                         fileName: "components/LandingPageV1Mobile/index.jsx",
-                        lineNumber: 175,
+                        lineNumber: 177,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -30945,12 +30949,12 @@ function LandingPageV1Mobile(props) {
                             iconProps: cardInfo4Props.iconProps
                         }, void 0, false, {
                             fileName: "components/LandingPageV1Mobile/index.jsx",
-                            lineNumber: 183,
+                            lineNumber: 185,
                             columnNumber: 6
                         }, this)
                     }, void 0, false, {
                         fileName: "components/LandingPageV1Mobile/index.jsx",
-                        lineNumber: 182,
+                        lineNumber: 184,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -30960,12 +30964,12 @@ function LandingPageV1Mobile(props) {
                             iconProps: cardInfo5Props.iconProps
                         }, void 0, false, {
                             fileName: "components/LandingPageV1Mobile/index.jsx",
-                            lineNumber: 190,
+                            lineNumber: 192,
                             columnNumber: 6
                         }, this)
                     }, void 0, false, {
                         fileName: "components/LandingPageV1Mobile/index.jsx",
-                        lineNumber: 189,
+                        lineNumber: 191,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -30975,18 +30979,18 @@ function LandingPageV1Mobile(props) {
                             iconProps: cardInfo6Props.iconProps
                         }, void 0, false, {
                             fileName: "components/LandingPageV1Mobile/index.jsx",
-                            lineNumber: 197,
+                            lineNumber: 199,
                             columnNumber: 6
                         }, this)
                     }, void 0, false, {
                         fileName: "components/LandingPageV1Mobile/index.jsx",
-                        lineNumber: 196,
+                        lineNumber: 198,
                         columnNumber: 5
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "components/LandingPageV1Mobile/index.jsx",
-                lineNumber: 138,
+                lineNumber: 140,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -31003,7 +31007,7 @@ function LandingPageV1Mobile(props) {
                                         children: losMejoresMdicos
                                     }, void 0, false, {
                                         fileName: "components/LandingPageV1Mobile/index.jsx",
-                                        lineNumber: 207,
+                                        lineNumber: 209,
                                         columnNumber: 7
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -31011,26 +31015,26 @@ function LandingPageV1Mobile(props) {
                                         children: somosUnEquipoDeP
                                     }, void 0, false, {
                                         fileName: "components/LandingPageV1Mobile/index.jsx",
-                                        lineNumber: 208,
+                                        lineNumber: 210,
                                         columnNumber: 7
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "components/LandingPageV1Mobile/index.jsx",
-                                lineNumber: 206,
+                                lineNumber: 208,
                                 columnNumber: 6
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                 className: "ct-as"
                             }, void 0, false, {
                                 fileName: "components/LandingPageV1Mobile/index.jsx",
-                                lineNumber: 212,
+                                lineNumber: 214,
                                 columnNumber: 6
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "components/LandingPageV1Mobile/index.jsx",
-                        lineNumber: 205,
+                        lineNumber: 207,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -31042,7 +31046,7 @@ function LandingPageV1Mobile(props) {
                                     className: "photo-background"
                                 }, void 0, false, {
                                     fileName: "components/LandingPageV1Mobile/index.jsx",
-                                    lineNumber: 228,
+                                    lineNumber: 230,
                                     columnNumber: 7
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
@@ -31051,29 +31055,29 @@ function LandingPageV1Mobile(props) {
                                     alt: "Veterinarian photo"
                                 }, void 0, false, {
                                     fileName: "components/LandingPageV1Mobile/index.jsx",
-                                    lineNumber: 229,
+                                    lineNumber: 231,
                                     columnNumber: 7
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _patientsCardDefault.default), {}, void 0, false, {
                                     fileName: "components/LandingPageV1Mobile/index.jsx",
-                                    lineNumber: 234,
+                                    lineNumber: 236,
                                     columnNumber: 7
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "components/LandingPageV1Mobile/index.jsx",
-                            lineNumber: 227,
+                            lineNumber: 229,
                             columnNumber: 6
                         }, this)
                     }, void 0, false, {
                         fileName: "components/LandingPageV1Mobile/index.jsx",
-                        lineNumber: 226,
+                        lineNumber: 228,
                         columnNumber: 5
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "components/LandingPageV1Mobile/index.jsx",
-                lineNumber: 204,
+                lineNumber: 206,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _testimonials22Default.default), {
@@ -31083,7 +31087,7 @@ function LandingPageV1Mobile(props) {
                 testimonialCard22Props: testimonials22Props.testimonialCard22Props
             }, void 0, false, {
                 fileName: "components/LandingPageV1Mobile/index.jsx",
-                lineNumber: 238,
+                lineNumber: 240,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -31106,7 +31110,7 @@ function LandingPageV1Mobile(props) {
                                                     children: comunicateConNosotros
                                                 }, void 0, false, {
                                                     fileName: "components/LandingPageV1Mobile/index.jsx",
-                                                    lineNumber: 251,
+                                                    lineNumber: 253,
                                                     columnNumber: 9
                                                 }, this),
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -31114,13 +31118,13 @@ function LandingPageV1Mobile(props) {
                                                     children: tenesAlgunaDudaS
                                                 }, void 0, false, {
                                                     fileName: "components/LandingPageV1Mobile/index.jsx",
-                                                    lineNumber: 254,
+                                                    lineNumber: 256,
                                                     columnNumber: 9
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "components/LandingPageV1Mobile/index.jsx",
-                                            lineNumber: 250,
+                                            lineNumber: 252,
                                             columnNumber: 8
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -31137,7 +31141,7 @@ function LandingPageV1Mobile(props) {
                                                                 alt: "PhoneCall"
                                                             }, void 0, false, {
                                                                 fileName: "components/LandingPageV1Mobile/index.jsx",
-                                                                lineNumber: 259,
+                                                                lineNumber: 261,
                                                                 columnNumber: 11
                                                             }, this),
                                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -31145,37 +31149,37 @@ function LandingPageV1Mobile(props) {
                                                                 children: "info@vethome.com.ar"
                                                             }, void 0, false, {
                                                                 fileName: "components/LandingPageV1Mobile/index.jsx",
-                                                                lineNumber: 264,
+                                                                lineNumber: 266,
                                                                 columnNumber: 11
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "components/LandingPageV1Mobile/index.jsx",
-                                                        lineNumber: 258,
+                                                        lineNumber: 260,
                                                         columnNumber: 10
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "components/LandingPageV1Mobile/index.jsx",
-                                                    lineNumber: 257,
+                                                    lineNumber: 259,
                                                     columnNumber: 9
                                                 }, this),
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _phone22Default.default), {
                                                     text5: phone221Props.text5
                                                 }, void 0, false, {
                                                     fileName: "components/LandingPageV1Mobile/index.jsx",
-                                                    lineNumber: 269,
+                                                    lineNumber: 271,
                                                     columnNumber: 9
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "components/LandingPageV1Mobile/index.jsx",
-                                            lineNumber: 256,
+                                            lineNumber: 258,
                                             columnNumber: 8
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "components/LandingPageV1Mobile/index.jsx",
-                                    lineNumber: 249,
+                                    lineNumber: 251,
                                     columnNumber: 7
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -31186,7 +31190,7 @@ function LandingPageV1Mobile(props) {
                                             children: conectateConNosotros
                                         }, void 0, false, {
                                             fileName: "components/LandingPageV1Mobile/index.jsx",
-                                            lineNumber: 274,
+                                            lineNumber: 276,
                                             columnNumber: 8
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -31200,29 +31204,29 @@ function LandingPageV1Mobile(props) {
                                                     alt: "Social Icons"
                                                 }, void 0, false, {
                                                     fileName: "components/LandingPageV1Mobile/index.jsx",
-                                                    lineNumber: 282,
+                                                    lineNumber: 284,
                                                     columnNumber: 10
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "components/LandingPageV1Mobile/index.jsx",
-                                                lineNumber: 278,
+                                                lineNumber: 280,
                                                 columnNumber: 9
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "components/LandingPageV1Mobile/index.jsx",
-                                            lineNumber: 277,
+                                            lineNumber: 279,
                                             columnNumber: 8
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "components/LandingPageV1Mobile/index.jsx",
-                                    lineNumber: 273,
+                                    lineNumber: 275,
                                     columnNumber: 7
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "components/LandingPageV1Mobile/index.jsx",
-                            lineNumber: 248,
+                            lineNumber: 250,
                             columnNumber: 6
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -31233,11 +31237,11 @@ function LandingPageV1Mobile(props) {
                                     children: [
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _inputFieldDefault.default), {
                                             inputType: inputField1Props.inputType,
-                                            inputPlaceholder: inputField1Props.inputPlaceholder,
+                                            inputPlaceholder: "Nombre completo",
                                             icon2Props: inputField1Props.icon2Props
                                         }, void 0, false, {
                                             fileName: "components/LandingPageV1Mobile/index.jsx",
-                                            lineNumber: 293,
+                                            lineNumber: 295,
                                             columnNumber: 8
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _inputFieldEmailDefault.default), {
@@ -31250,7 +31254,7 @@ function LandingPageV1Mobile(props) {
                                             required: true
                                         }, void 0, false, {
                                             fileName: "components/LandingPageV1Mobile/index.jsx",
-                                            lineNumber: 298,
+                                            lineNumber: 300,
                                             columnNumber: 8
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -31263,105 +31267,105 @@ function LandingPageV1Mobile(props) {
                                                             className: arrowRight2Props.className
                                                         }, void 0, false, {
                                                             fileName: "components/LandingPageV1Mobile/index.jsx",
-                                                            lineNumber: 309,
+                                                            lineNumber: 311,
                                                             columnNumber: 10
                                                         }, this),
                                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                                             className: "divider"
                                                         }, void 0, false, {
                                                             fileName: "components/LandingPageV1Mobile/index.jsx",
-                                                            lineNumber: 310,
+                                                            lineNumber: 312,
                                                             columnNumber: 10
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "components/LandingPageV1Mobile/index.jsx",
-                                                    lineNumber: 308,
+                                                    lineNumber: 310,
                                                     columnNumber: 9
                                                 }, this),
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
                                                     className: "telfono body-m",
                                                     name: "tel\xe9fono",
-                                                    placeholder: inputPlaceholder1,
+                                                    placeholder: "Tel\xe9fono",
                                                     type: inputType1,
                                                     required: true
                                                 }, void 0, false, {
                                                     fileName: "components/LandingPageV1Mobile/index.jsx",
-                                                    lineNumber: 312,
+                                                    lineNumber: 314,
                                                     columnNumber: 9
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "components/LandingPageV1Mobile/index.jsx",
-                                            lineNumber: 307,
+                                            lineNumber: 309,
                                             columnNumber: 8
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                             className: "input-field-1",
                                             children: [
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _icon2Default.default), {
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _iconMensajeDefault.default), {
                                                     className: icon2Props.className
                                                 }, void 0, false, {
                                                     fileName: "components/LandingPageV1Mobile/index.jsx",
-                                                    lineNumber: 321,
+                                                    lineNumber: 323,
                                                     columnNumber: 9
                                                 }, this),
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
                                                     className: "mensaje body-m",
                                                     name: "mensaje",
-                                                    placeholder: inputPlaceholder2,
+                                                    placeholder: "Mensaje",
                                                     type: inputType2,
                                                     required: true
                                                 }, void 0, false, {
                                                     fileName: "components/LandingPageV1Mobile/index.jsx",
-                                                    lineNumber: 322,
+                                                    lineNumber: 325,
                                                     columnNumber: 9
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "components/LandingPageV1Mobile/index.jsx",
-                                            lineNumber: 320,
+                                            lineNumber: 322,
                                             columnNumber: 8
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "components/LandingPageV1Mobile/index.jsx",
-                                    lineNumber: 292,
+                                    lineNumber: 294,
                                     columnNumber: 7
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _button2Default.default), {}, void 0, false, {
                                     fileName: "components/LandingPageV1Mobile/index.jsx",
-                                    lineNumber: 331,
+                                    lineNumber: 334,
                                     columnNumber: 7
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "components/LandingPageV1Mobile/index.jsx",
-                            lineNumber: 291,
+                            lineNumber: 293,
                             columnNumber: 6
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "components/LandingPageV1Mobile/index.jsx",
-                    lineNumber: 247,
+                    lineNumber: 249,
                     columnNumber: 5
                 }, this)
             }, void 0, false, {
                 fileName: "components/LandingPageV1Mobile/index.jsx",
-                lineNumber: 246,
+                lineNumber: 248,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footer22Default.default), {
                 children: footer22Props.children
             }, void 0, false, {
                 fileName: "components/LandingPageV1Mobile/index.jsx",
-                lineNumber: 335,
+                lineNumber: 338,
                 columnNumber: 4
             }, this)
         ]
     }, void 0, true, {
         fileName: "components/LandingPageV1Mobile/index.jsx",
-        lineNumber: 115,
+        lineNumber: 117,
         columnNumber: 3
     }, this);
 }
@@ -31376,7 +31380,7 @@ $RefreshReg$(_c, "LandingPageV1Mobile");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../Navbar":"iGHAZ","../Boton":"bUfst","../Group9":"7skSq","../CardInfo":"iBGr9","../Button":"cxMY5","../Icon":"efBlU","../ArrowRight":"7MUFy","../PatientsCard":"2ORqZ","../Testimonials22":"3oDU7","../Phone22":"gbpHc","../InputField":"jkhPM","../Icon2":"1MZoF","../Button2":"f26VG","../Footer22":"g0FHE","./LandingPageV1Mobile.css":"gnZ4F","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-scroll":"2D4g1","../ContactDetails":"bzZLP","../InputFieldEmail":"hfBxx"}],"iGHAZ":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../Navbar":"iGHAZ","../Boton":"bUfst","../Group9":"7skSq","../CardInfo":"iBGr9","../Button":"cxMY5","../Icon":"efBlU","../ArrowRight":"7MUFy","../PatientsCard":"2ORqZ","../Testimonials22":"3oDU7","../Phone22":"gbpHc","../InputField":"jkhPM","../Icon2":"1MZoF","../Button2":"f26VG","../Footer22":"g0FHE","./LandingPageV1Mobile.css":"gnZ4F","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-scroll":"2D4g1","../ContactDetails":"bzZLP","../InputFieldEmail":"hfBxx","../InputFieldPhone":"4CepJ","../IconMensaje":"c9xU3"}],"iGHAZ":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$eb27 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -34810,7 +34814,168 @@ $RefreshReg$(_c, "InputField");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../Icon2":"1MZoF","./InputField.css":"ltvE1","../IconEmail":"2561q","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"ltvE1":[function() {},{}],"kbhy5":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../Icon2":"1MZoF","./InputField.css":"ltvE1","../IconEmail":"2561q","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"ltvE1":[function() {},{}],"4CepJ":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$645b = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$645b.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _icon2 = require("../Icon2");
+var _icon2Default = parcelHelpers.interopDefault(_icon2);
+var _inputFieldCss = require("./InputField.css");
+var _iconPhone = require("../IconPhone");
+var _iconPhoneDefault = parcelHelpers.interopDefault(_iconPhone);
+function InputField(props) {
+    const { inputType , inputPlaceholder , icon2Props , value , onChange , name  } = props;
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "input-field-2",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _iconPhoneDefault.default), {
+                className: icon2Props.className
+            }, void 0, false, {
+                fileName: "components/InputFieldPhone/index.jsx",
+                lineNumber: 12,
+                columnNumber: 4
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                className: "full-name body-m",
+                placeholder: inputPlaceholder,
+                type: inputType,
+                value: value,
+                onChange: onChange,
+                name: name,
+                required: true
+            }, void 0, false, {
+                fileName: "components/InputFieldPhone/index.jsx",
+                lineNumber: 13,
+                columnNumber: 4
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "components/InputFieldPhone/index.jsx",
+        lineNumber: 11,
+        columnNumber: 3
+    }, this);
+}
+_c = InputField;
+exports.default = InputField;
+var _c;
+$RefreshReg$(_c, "InputField");
+
+  $parcel$ReactRefreshHelpers$645b.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../Icon2":"1MZoF","./InputField.css":"kbBW9","../IconPhone":"8sSCo","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kbBW9":[function() {},{}],"8sSCo":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$a508 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$a508.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _icon2Css = require("./Icon2.css");
+function Icon2(props) {
+    const { className  } = props;
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: `icon-3-1 ${className || ""}`,
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                className: "user-1",
+                src: "/img/phonecall-1.svg",
+                alt: "User"
+            }, void 0, false, {
+                fileName: "components/IconPhone/index.jsx",
+                lineNumber: 9,
+                columnNumber: 4
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "divider-1"
+            }, void 0, false, {
+                fileName: "components/IconPhone/index.jsx",
+                lineNumber: 10,
+                columnNumber: 4
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "components/IconPhone/index.jsx",
+        lineNumber: 8,
+        columnNumber: 3
+    }, this);
+}
+_c = Icon2;
+exports.default = Icon2;
+var _c;
+$RefreshReg$(_c, "Icon2");
+
+  $parcel$ReactRefreshHelpers$a508.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./Icon2.css":"8mT97","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8mT97":[function() {},{}],"c9xU3":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$bee9 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$bee9.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _icon2Css = require("./Icon2.css");
+function Icon2(props) {
+    const { className  } = props;
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: `icon-3-1 ${className || ""}`,
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                className: "send",
+                src: "/img/send1.png",
+                alt: "User"
+            }, void 0, false, {
+                fileName: "components/IconMensaje/index.jsx",
+                lineNumber: 9,
+                columnNumber: 4
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "divider-1"
+            }, void 0, false, {
+                fileName: "components/IconMensaje/index.jsx",
+                lineNumber: 10,
+                columnNumber: 4
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "components/IconMensaje/index.jsx",
+        lineNumber: 8,
+        columnNumber: 3
+    }, this);
+}
+_c = Icon2;
+exports.default = Icon2;
+var _c;
+$RefreshReg$(_c, "Icon2");
+
+  $parcel$ReactRefreshHelpers$bee9.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./Icon2.css":"iuO2P","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iuO2P":[function() {},{}],"kbhy5":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$86bc = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -36578,168 +36743,7 @@ $RefreshReg$(_c, "TestimonialCard");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../StarRating":"bzUQO","./TestimonialCard.css":"dBiub","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"dBiub":[function() {},{}],"c1cWM":[function() {},{}],"4CepJ":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$645b = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$645b.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _icon2 = require("../Icon2");
-var _icon2Default = parcelHelpers.interopDefault(_icon2);
-var _inputFieldCss = require("./InputField.css");
-var _iconPhone = require("../IconPhone");
-var _iconPhoneDefault = parcelHelpers.interopDefault(_iconPhone);
-function InputField(props) {
-    const { inputType , inputPlaceholder , icon2Props , value , onChange , name  } = props;
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "input-field-2",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _iconPhoneDefault.default), {
-                className: icon2Props.className
-            }, void 0, false, {
-                fileName: "components/InputFieldPhone/index.jsx",
-                lineNumber: 12,
-                columnNumber: 4
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                className: "full-name body-m",
-                placeholder: inputPlaceholder,
-                type: inputType,
-                value: value,
-                onChange: onChange,
-                name: name,
-                required: true
-            }, void 0, false, {
-                fileName: "components/InputFieldPhone/index.jsx",
-                lineNumber: 13,
-                columnNumber: 4
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "components/InputFieldPhone/index.jsx",
-        lineNumber: 11,
-        columnNumber: 3
-    }, this);
-}
-_c = InputField;
-exports.default = InputField;
-var _c;
-$RefreshReg$(_c, "InputField");
-
-  $parcel$ReactRefreshHelpers$645b.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../Icon2":"1MZoF","./InputField.css":"kbBW9","../IconPhone":"8sSCo","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kbBW9":[function() {},{}],"8sSCo":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$a508 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$a508.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _icon2Css = require("./Icon2.css");
-function Icon2(props) {
-    const { className  } = props;
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: `icon-3-1 ${className || ""}`,
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                className: "user-1",
-                src: "/img/phonecall-1.svg",
-                alt: "User"
-            }, void 0, false, {
-                fileName: "components/IconPhone/index.jsx",
-                lineNumber: 9,
-                columnNumber: 4
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "divider-1"
-            }, void 0, false, {
-                fileName: "components/IconPhone/index.jsx",
-                lineNumber: 10,
-                columnNumber: 4
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "components/IconPhone/index.jsx",
-        lineNumber: 8,
-        columnNumber: 3
-    }, this);
-}
-_c = Icon2;
-exports.default = Icon2;
-var _c;
-$RefreshReg$(_c, "Icon2");
-
-  $parcel$ReactRefreshHelpers$a508.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./Icon2.css":"8mT97","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8mT97":[function() {},{}],"c9xU3":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$bee9 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$bee9.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _icon2Css = require("./Icon2.css");
-function Icon2(props) {
-    const { className  } = props;
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: `icon-3-1 ${className || ""}`,
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                className: "send",
-                src: "/img/send1.png",
-                alt: "User"
-            }, void 0, false, {
-                fileName: "components/IconMensaje/index.jsx",
-                lineNumber: 9,
-                columnNumber: 4
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "divider-1"
-            }, void 0, false, {
-                fileName: "components/IconMensaje/index.jsx",
-                lineNumber: 10,
-                columnNumber: 4
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "components/IconMensaje/index.jsx",
-        lineNumber: 8,
-        columnNumber: 3
-    }, this);
-}
-_c = Icon2;
-exports.default = Icon2;
-var _c;
-$RefreshReg$(_c, "Icon2");
-
-  $parcel$ReactRefreshHelpers$bee9.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./Icon2.css":"iuO2P","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iuO2P":[function() {},{}],"aMelp":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../StarRating":"bzUQO","./TestimonialCard.css":"dBiub","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"dBiub":[function() {},{}],"c1cWM":[function() {},{}],"aMelp":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$659a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;

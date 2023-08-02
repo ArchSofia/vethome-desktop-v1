@@ -18,6 +18,8 @@ import "./LandingPageV1Mobile.css";
 import { useState } from "react";
 import { Link, animateScroll as scroll, scroller } from "react-scroll";
 import InputFieldEmail from "../InputFieldEmail";
+import InputFieldPhone from "../InputFieldPhone";
+import IconMensaje from "../IconMensaje";
 
 function LandingPageV1Mobile(props) {
 	const {
@@ -292,7 +294,7 @@ function LandingPageV1Mobile(props) {
 						<div className="typeforms">
 							<InputField
 								inputType={inputField1Props.inputType}
-								inputPlaceholder={inputField1Props.inputPlaceholder}
+								inputPlaceholder="Nombre completo"
 								icon2Props={inputField1Props.icon2Props}
 							/>
 							<InputFieldEmail
@@ -312,17 +314,18 @@ function LandingPageV1Mobile(props) {
 								<input
 									className="telfono body-m"
 									name="teléfono"
-									placeholder={inputPlaceholder1}
+									placeholder="Teléfono"
 									type={inputType1}
 									required
 								/>
 							</div>
 							<div className="input-field-1">
-								<Icon2 className={icon2Props.className} />
+								<IconMensaje className={icon2Props.className} />
+
 								<input
 									className="mensaje body-m"
 									name="mensaje"
-									placeholder={inputPlaceholder2}
+									placeholder="Mensaje"
 									type={inputType2}
 									required
 								/>
