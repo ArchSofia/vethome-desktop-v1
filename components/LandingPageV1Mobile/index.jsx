@@ -13,9 +13,11 @@ import InputField from "../InputField";
 import Icon2 from "../Icon2";
 import Button2 from "../Button2";
 import Footer22 from "../Footer22";
+import ContactDetails from "../ContactDetails";
 import "./LandingPageV1Mobile.css";
 import { useState } from "react";
 import { Link, animateScroll as scroll, scroller } from "react-scroll";
+import InputFieldEmail from "../InputFieldEmail";
 
 function LandingPageV1Mobile(props) {
 	const {
@@ -37,6 +39,7 @@ function LandingPageV1Mobile(props) {
 		inputPlaceholder1,
 		inputType2,
 		inputPlaceholder2,
+		contactDetailsProps,
 		navbarProps,
 		botonProps,
 		group9Props,
@@ -251,8 +254,20 @@ function LandingPageV1Mobile(props) {
 								<p className="tenes-alguna-duda-s body-m">{tenesAlgunaDudaS}</p>
 							</div>
 							<div className="contact-details">
+								<div className="contact-details-2">
+									<div className="contact-details-2-item">
+										<img
+											class="phone-call-2"
+											src="/img/envelopesimple-1.svg"
+											alt="PhoneCall"
+										></img>
+										<div className="text-5-1 body-m">
+											{"info@vethome.com.ar"}
+										</div>
+									</div>
+								</div>
 								<Phone22 text5={phone221Props.text5} />
-								<Phone22 text5={phone222Props.text5} />
+								{/* <Phone22 text5={phone222Props.text5} /> */}
 							</div>
 						</div>
 						<div className="social-media">
@@ -280,10 +295,14 @@ function LandingPageV1Mobile(props) {
 								inputPlaceholder={inputField1Props.inputPlaceholder}
 								icon2Props={inputField1Props.icon2Props}
 							/>
-							<InputField
+							<InputFieldEmail
 								inputType={inputField2Props.inputType}
 								inputPlaceholder={inputField2Props.inputPlaceholder}
 								icon2Props={inputField2Props.icon2Props}
+								name="email"
+								value={formData.email}
+								onChange={handleChange}
+								required
 							/>
 							<div className="input-field">
 								<div className="icon">

@@ -878,71 +878,6 @@ input:focus {
   color: #2d2d2d99;
 }
 
-.input-field-2, .input-field-3 {
-  background-color: var(--white);
-  border: 1px solid;
-  border-color: var(--deviders---grey-);
-  border-radius: 20px;
-  align-self: stretch;
-  align-items: center;
-  gap: 12px;
-  width: 100%;
-  height: 60px;
-  padding: 8px 20px;
-  display: flex;
-  position: relative;
-}
-
-.full-name, .email, .full-name-1, .email-1, .telfono-1 {
-  color: var(--onboarding-background-grey);
-  white-space: nowrap;
-  background-color: #0000;
-  border: 0;
-  flex: 1;
-  padding: 0;
-  font-weight: 400;
-  line-height: 24px;
-  position: relative;
-}
-
-.full-name::placeholder, .email::placeholder, .full-name-1::placeholder, .email-1::placeholder, .telfono-1::placeholder {
-  color: #2d2d2d99;
-}
-
-.contact-details-2 {
-  flex-direction: column;
-  flex: none;
-  align-items: flex-start;
-  gap: 20px;
-  display: inline-flex;
-  position: relative;
-}
-
-.contact-details-2-item {
-  flex: none;
-  align-items: center;
-  gap: 12px;
-  width: 465px;
-  display: flex;
-  position: relative;
-}
-
-.phone-call-2, .envelope-simple-5 {
-  width: 24px;
-  height: 24px;
-  position: relative;
-}
-
-.text-5-1, .helloanimaappcom {
-  color: var(--onboarding-background-grey);
-  white-space: nowrap;
-  flex: 1;
-  margin-top: -1px;
-  font-weight: 400;
-  line-height: 24px;
-  position: relative;
-}
-
 .testimonials-1 {
   background-color: var(--neutral---zircon);
   flex-direction: column;
@@ -1496,6 +1431,71 @@ input:focus {
   margin-left: 15px;
   line-height: 37px;
   transition: all .2s;
+}
+
+.input-field-2, .input-field-3 {
+  background-color: var(--white);
+  border: 1px solid;
+  border-color: var(--deviders---grey-);
+  border-radius: 20px;
+  align-self: stretch;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  height: 60px;
+  padding: 8px 20px;
+  display: flex;
+  position: relative;
+}
+
+.full-name, .email, .full-name-1, .email-1, .telfono-1 {
+  color: var(--onboarding-background-grey);
+  white-space: nowrap;
+  background-color: #0000;
+  border: 0;
+  flex: 1;
+  padding: 0;
+  font-weight: 400;
+  line-height: 24px;
+  position: relative;
+}
+
+.full-name::placeholder, .email::placeholder, .full-name-1::placeholder, .email-1::placeholder, .telfono-1::placeholder {
+  color: #2d2d2d99;
+}
+
+.contact-details-2 {
+  flex-direction: column;
+  flex: none;
+  align-items: flex-start;
+  gap: 20px;
+  display: inline-flex;
+  position: relative;
+}
+
+.contact-details-2-item {
+  flex: none;
+  align-items: center;
+  gap: 12px;
+  width: 465px;
+  display: flex;
+  position: relative;
+}
+
+.phone-call-2, .envelope-simple-5 {
+  width: 24px;
+  height: 24px;
+  position: relative;
+}
+
+.text-5-1, .helloanimaappcom {
+  color: var(--onboarding-background-grey);
+  white-space: nowrap;
+  flex: 1;
+  margin-top: -1px;
+  font-weight: 400;
+  line-height: 24px;
+  position: relative;
 }
 
 .landing-page-v1-mobile {
